@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600&display=swap" rel="stylesheet"/>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="style/index.css" />
+    <title>bognarit.net</title>
+    <script defer src="script.js"></script>
+</head>
+<body>
+<!--     <div class="top-header">
+        <a class="info" href="#" id="hilfe_kontakt">Hilfe & Kontakt</a> |
+        <a class="info" href="#" id="warenkorb">Warenkorb</a> |
+        <a class="info" href="#" id="login">Login</a>
+    </div> -->
+    <header class="main-header">
+        <nav class="navbar">
+            <div class="navdiv">
+                <img img src="img/logo.png" alt="logo" class="nav_logo">
+                <ul class="nav_links">
+                    <li class="nav_item">
+                        <a class="nav_link" href="food.html">Food</a>
+                    </li>
+                    <li class="nav_item">
+                        <a class="nav_link" href="#">Non-Food</a>
+                    </li>
+                    <li class="nav_item">
+                        <a class="nav_link" href="#">Info</a>
+                    </li>
+                    <li class="nav_item">
+                        <a class="nav_link" href="#">Services</a>
+                    </li>
+                    <li class="nav_item">
+                        <a class="nav_link" href="#">About</a>
+                    </li>
+                    <button class="nav_btn btn--show-modal"><a href="#">SignIn</a></button>
+                </ul>
+            </div>
+        </nav>
+        <div>
+			<img src="img/DSL_Slider_BestellenLiefern.jpg" alt="liefern" width="100%" height="80%"/>
+		</div>
+    </header>
+
+    <div class="modal hidden">
+        <button class="btn--close-modal">&times;</button>
+        <h2 class="modal_header">Mit bognarit.net Konto anmelden</h2>
+        <form class="modal__form">
+            <label>E-Mail-Adresse</label>
+            <input type="text" placeholder="E-Mail-Adresse">
+            <label>Passwort</label>
+            <input type="text" placeholder="Passwort">
+            <button>Anmelden</button>
+        </form>
+    </div>
+    <div class="overlay hidden"></div>
+
+</body>
+</html>
