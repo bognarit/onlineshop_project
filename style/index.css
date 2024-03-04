@@ -2,25 +2,25 @@
     margin: 0;
     padding: 0;
     text-decoration: none;
+    font-family: Helvetica, Arial, sans-serif;
 }
+
+body { background: #f1f2f3; }
 
 /* Menu */
 .navbar {
     background: #003869;
-    /* font-family: calibri; */
     padding-right: 80px;
     padding-left: 80px;
 }
 
-.navdiv {
+.nav_div {
     display: flex;
     align-items: center;
     justify-content: space-between;
 }
 
-.nav_logo {
-    padding-top: 20px;
-}
+.nav_logo { padding-top: 20px; }
 
 .nav_item {
     list-style: none;
@@ -28,38 +28,25 @@
 }
 
 .nav_link {
-    font-size: 22px;
+    font-size: 24px;
     font-weight: bold;
-    margin-right: 25px;
+    margin-right: 27px;
 }
 
 .nav_link:link,
 .nav_link:visited {
-    color: #f3f3f3;;
-}
-
-.nav_link--btn {
-    background-color: #f3f3f3;;
-    border: 2px solid black;
-    padding: 8px 10px;
-    border-radius: 15px;
-    font-weight: bold;
-}
-
-.nav_link--btn:link,
-.nav_link--btn:visited {
-    color: black;
+    color: #f3f3f3;
 }
 
 /* LogIn - Registration */
 .modal {
     position: fixed;
-    top: 16%;
+    top: 13%;
     left: 91%;
     transform: translate(-50%, -50%);
-    background-color: #f3f3f3;
+    background-color: #f1f2f3;
     padding: 35px 50px 30px 50px;
-    box-shadow: 0 4rem 6rem rgba(0, 0, 0, 0.3);
+    box-shadow: 0 3px 3px rgba(0,0,0,0.15);
     z-index: 1000;
     transition: all 0.5s;
     border-radius: 15px;
@@ -83,12 +70,12 @@
 
 .modal_link:link,
 .modal_link:visited {
-    color: black;
+    color: #000000;
 }
 
 .btn--close-modal {
     font-family: inherit;
-    color: inherit;
+    color: #000000;
     position: absolute;
     top: 0.3rem;
     right: 1rem;

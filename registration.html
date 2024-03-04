@@ -3,17 +3,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600&display=swap" rel="stylesheet"/>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js" integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="style/registration.css" />
+    <script defer src="script/registration.js"></script>
     <title>Registration bei bognarit</title>
 </head>
 <body>
-    <div class="main_wrapper">
-        <h2 id="regist">Registration</h2>
-        <form action="" method="get" class="form">
+    <header class="header">
+        <a href="index.html"><img img src="img/logo.png" alt="logo" class="nav_logo"></a>
+    </header>
+    <main class="main_wrapper">
+        <h2 class="regist_title">Neues bognarit Konto erstellen</h2>
+        <form class="regist_form">
             <div>
-                <label for="anrede">Anrede:<b style='color: red'>*</b></label>
+                <label for="anrede">Anrede:<b>*</b></label>
                 <select name="anrede" id="anrede" required="required">
                     <option value="choose">Anrede</option>
                     <option value="lady">Frau</option>
@@ -21,48 +24,45 @@
                 </select>
             </div>
             <div>
-                <label for="first_name">Vorname:<b style ='color: red'>*</b></label>			
+                <label for="first_name">Vorname:<b>*</b></label>			
                 <input type="text" name="first_name" id="first_name" required="required" />
             </div>
             <div>
-                <label for="surname">Nachname:<b style ='color: red'>*</b></label>		
+                <label for="surname">Nachname:<b>*</b></label>		
                 <input type="text" name="surname" id="surname" required="required" />
             </div>
             <div>
-                <label for="date_of_birth">Geburtsdatum:<b style ='color: red'>*</b></label>
+                <label for="date_of_birth">Geburtsdatum:<b>*</b></label>
                 <input type="date" name="date_of_birth" id="date_of_birth" required="required" />
             </div>
             <div>
-                <label for="email">E-Mail:<b style ='color: red'>*</b></label>
+                <label for="email">E-Mail:<b>*</b></label>
                 <input type="email" name="email" id="email" required="required" />
             </div>
             <div>
-                <label for="password">Passwort:<b style ='color: red'>*</b></label>
+                <label for="password">Passwort:<b>*</b></label>
                 <input type="password" name="password" id="password" required="required" />
             </div>
             <div>
-                <label for="password">Passwort bestätigen:<b style ='color: red'>*</b></label>
+                <label for="password">Passwort bestätigen:<b>*</b></label>
                 <input type="password" name="password" id="password" required="required" />
             </div>
             <div>
-                <label for="street_nr">Straße, Hausnummer:<b style ='color: red'>*</b></label>
+                <label for="street_nr">Straße, Hausnummer:<b>*</b></label>
                 <input type="text" name="street_nr" id="street_nr" required="required" />
             </div>
             <div>
-                <label for="city">Ort:<b style ='color: red'>*</b></label>
+                <label for="city">Ort:<b>*</b></label>
                 <input type="text" name="city" id="city" required="required" />
             </div>
             <div>
-                <label for="zip">Postleitzahl:<b style ='color: red'>*</b></label>
+                <label for="zip">Postleitzahl:<b>*</b></label>
                 <input type="nummer" name="zip" id="zip" required="required" />
             </div>
             <div>
-                <label for="country">Land:<b style='color: red'>*</b></label>
-                <select name="land" id="country" required="required">
-                    <option value="country">Land</option>
-                    <option value="germany">Deutschland</option>
-                    <option value="austria">Östereich</option>
-                    <option value="switzerland">Schweitz</option>
+                <label for="country">Land:<b>*</b></label>
+                <select name="country" id="regist_country" required="required">
+                    <option value="country">Land wählen</option>
                 </select>
             </div>
             <div>
@@ -71,11 +71,11 @@
             </div>
             <div>
                 <input style="width: 15px;" type="checkbox" name="akzep" id="akzep" required="required" />				
-                <label style="width: 500px;" for="akzep">AGB und Datenschutzerklärung gelesen und akzeptiert.<b style='color: red'>*</b></label>
+                <label style="width: 500px;" for="akzep">AGB und Datenschutzerklärung gelesen und akzeptiert.<b>*</b></label>
             </div>
-            <p id="pflichtig">* Pflichtfelder</p>
-            <input id="send" type="submit" name="senden" value="Send">
+            <p id="required">* Pflichtfelder</p>
+            <div class="send_div"><input id="send" type="submit" name="senden" value="Registrieren"></div>
         </form>
-    </div>
+    </main>
 </body>
 </html>
