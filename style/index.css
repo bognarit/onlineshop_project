@@ -38,6 +38,72 @@ body { background: #f1f2f3; }
     color: #f3f3f3;
 }
 
+/* Container */
+.main_title {
+    text-align: center;
+    margin: 40px 0;
+    font-size: 50px;
+}
+
+.products { position: relative; }
+
+.food_title { margin: 5% 0 3% 15% }
+
+.non_food_title { margin: 8% 0 3% 15%; }
+
+.foods {
+    display: flex;
+    justify-content: center;
+}
+
+.non_foods {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 150px;
+}
+
+.food_products,
+.non_food_products {
+    position: relative;
+    padding-right: 60px;
+}
+
+.food_products span,
+.non_food_products span {
+    position: absolute;
+    font-size: 20px;
+    padding: 15px;
+    bottom: 20%;
+    color: #000000;
+    background-color: rgba(248, 247, 216, 0.7);
+}
+
+/* Footer */
+.footer {
+    padding: 14px 0;
+    background-color: rgb(237, 230, 230);
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+}
+
+.footer_nav {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+}
+  
+.footer_item {
+    margin-right: 6rem;
+}
+  
+.footer_link {
+    font-size: 1.3rem;
+    color: #000000;
+    text-decoration: none;
+}
+
 /* LogIn - Registration */
 .modal {
     position: fixed;
@@ -50,9 +116,9 @@ body { background: #f1f2f3; }
     z-index: 1000;
     transition: all 0.5s;
     border-radius: 15px;
-  }
+}
 
-  .overlay {
+.overlay {
     position: fixed;
     top: 0;
     left: 0;
@@ -60,7 +126,7 @@ body { background: #f1f2f3; }
     height: 100%;
     z-index: 100;
     transition: all 0.5s;
-  }
+}
 
 .modal_links {
     font-size: 30px;
