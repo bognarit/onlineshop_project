@@ -43,7 +43,7 @@
         </nav>     
     </header>
     
-    <div class ="container">
+    <div class="main_container">
         <h1 class="main_title">Willkommen bei bognarit</h2>
         <div class="products">
             <h1 class="food_title">Food Produkte</h1>
@@ -87,7 +87,7 @@
                 </div>
                 <div class="non_food_products">
                     <a href="#">
-                        <span>Elektornische Geräte</span>
+                        <span>Elektronische Geräte</span>
                         <img src="img/categories/elektronische_geraete.jpg" alt="elektronische_geraete" width="300" height="300">
                     </a>
                 </div>
@@ -112,7 +112,48 @@
             </div>
         </div>
     </div>
-    
+
+    <div class="pay_order">
+        <div class="main_pay">
+            <h2 class="pay_order_title">Bezahlungsarten</h2>
+            <img src="img/payment_options.jpg" class="pay_img" width="750" height="500" alt="pay" name="pay" />
+        </div>
+        <div class="main_order">
+            <h2 class="pay_order_title">Bestellung per App</h2>
+            <img src="img/order_with_mobile.jpg" style="border-radius: 7px;" width="750" height="500" alt="app" name="app" />
+        </div>
+    </div>
+
+    <div class="newsletter">
+        <h2 class="news_title">Newsletter - immer gut informiert sein</h2>
+        <div class="news_wrapper">
+            <form class="news_form">
+                <div>
+                    <label for="email" id="email_text">Ihre E-Mail-Adresse:</label><br />
+                    <input type="email" id="email" name="email" required="required"/>
+                </div>
+                <div>
+                    <input style="width: 15px;" type="checkbox" name="accept" id="accept" required="required" />				
+                    <label for="understand" id="understand">Ja, ich bin damit einverstanden, dass bognarit.net aus meinem Kauf-
+                    und Nutzungsverhalten personenbezogene Profile erstellt, um Werbe- und Webangebote besser auf meine
+                    persönlichen Interessen auszurichten. Die Einwilligung können Sie jederzeit widerrufen.<b style='color: red'>*</b></label>
+                </div>
+                <div>
+                    <input id="request" type="submit" name="request" value="Newsletter anfordern">
+                </div>
+            </form>
+            <div class="benefit">
+                <div class="benefit_text">
+                    <h2 class="benefit_title">Vorteile von Newsletter:</h2>
+                    <p><a>✔</a> Aktuelle Angebote</p>
+                    <p><a>✔</a> Exklusive Rabatte</p>
+                    <p><a>✔</a> Individuelle Coupons</p>
+                    <p><a>✔</a> Tolle Gewinnspiele</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <footer class="footer">
         <ul class="footer_nav">
             <li class="footer_item">
@@ -128,7 +169,7 @@
                 <a class="footer_link" href="#">AGB</a>
             </li>
             <li class="footer_item">
-                <a class="footer_link" href="#">Datnschutz</a>
+                <a class="footer_link" href="#">Datenschutz</a>
             </li>
         </ul>
     </footer>

@@ -38,7 +38,7 @@ body { background: #f1f2f3; }
     color: #f3f3f3;
 }
 
-/* Container */
+/* Products */
 .main_title {
     text-align: center;
     margin: 40px 0;
@@ -49,7 +49,7 @@ body { background: #f1f2f3; }
 
 .food_title { margin: 5% 0 3% 15% }
 
-.non_food_title { margin: 8% 0 3% 15%; }
+.non_food_title { margin: 5% 0 3% 15%; }
 
 .foods {
     display: flex;
@@ -59,7 +59,7 @@ body { background: #f1f2f3; }
 .non_foods {
     display: flex;
     justify-content: center;
-    margin-bottom: 150px;
+    margin-bottom: 100px;
 }
 
 .food_products,
@@ -154,4 +154,111 @@ body { background: #f1f2f3; }
 .hidden {
     visibility: hidden;
     opacity: 0;
+}
+
+/* pay - order*/
+.pay_order {
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    margin-bottom: 100px;
+}
+
+.main_pay {
+    float: left;
+    text-align: center;
+    padding-bottom: 10px;
+    margin-right: 80px;
+}
+
+.pay_order_title {
+    font-size: 30px;
+    margin-bottom: 60px;
+}
+
+.main_order {
+    text-align: center;
+    padding-bottom: 10px;
+    margin-left: 35px;
+}
+
+.pay_img {
+    box-shadow: 0 1px 4px 0;
+    border-radius: 7px;
+}
+
+/* newsletter */
+.newsletter {
+    margin-bottom: 150px;
+}
+
+.news_title {
+    font-size: 30px;
+    margin-bottom: 50px;
+    margin-left: 100px;
+}
+
+.news_wrapper {
+    box-shadow: 0 1px 4px 0;
+    border-radius: 7px;
+    padding: 40px 0px;
+    margin: 0px 80px;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+
+.news_form {
+    float: left;
+}
+
+#email {
+    padding: 6px 5px;
+    width: 600px;
+    margin:15px 0px 15px 0px;
+    font-size: 17px;
+}
+
+#email_text { font-size: 22px; }
+
+#request {
+    font-size: 17px;
+    padding: 5px 18px;
+    cursor: pointer;
+}
+
+.benefit {
+    display: flex;
+    height: 100%;
+    margin-left: 170px;
+}
+
+#understand {
+    display: inline-block;
+    width: 900px;
+    margin-bottom: 20px;
+    line-height: 21px;
+    text-align: justify;
+    font-size: 18px;
+}
+
+#request {
+    font-size: 18px;
+}
+
+.benefit_text p {
+    font-size: 20px;
+    line-height: 35px;
+}
+
+.benefit_text p a {
+    color: #008000;
+}
+
+.benefit_title {
+    font-size: 22px;
+    padding-bottom: 10px;
+    text-decoration: underline;
 }
