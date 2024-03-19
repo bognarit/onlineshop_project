@@ -3,148 +3,197 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <link rel="stylesheet" href="style/index.css" />
-    <script defer src="script/script.js"></script>
+    <script defer src="script/script.js" type="module"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <title>bognarit.net</title>
 </head>
 <body>
-    <header class="main_header">
+    <header class="header">
+        <a href="index.html" class="logo"><img src="img/logo.png" alt="logo"></a>
         <nav class="navbar">
-            <div class="nav_div">
-                <a href="index.html"><img img src="img/logo.png" alt="logo" class="nav_logo"></a>
-                <ul class="nav_links">
-                    <li class="nav_item">
-                        <a class="nav_link" href="food.html">Food</a>
-                    </li>
-                    <li class="nav_item">
-                        <a class="nav_link" href="non-food.html">Non-Food</a>
-                    </li>
-                    <li class="nav_item">
-                        <a class="nav_link" href="#">Lieferung</a>
-                    </li>
-                    <li class="nav_item">
-                        <a class="nav_link" href="#">Kontakt</a>
-                    </li>
-                    <li class="nav_item">
-                        <a class="nav_link" href="#"><span>Unternehmen</span></a>
-                    </li>
-                    <li class="nav_item">
-                        <a class="nav_link btn--show-modal" href="#"><i class="fa-regular fa-user"></i></a>
-                    </li>
-                    <li class="nav_item">
-                        <a class="nav_link" href="#"><i class="fa-regular fa-circle-question"></i></a>
-                    </li>
-                    <li class="nav_item">
-                        <a class="nav_link" href="#"><i class="fa-solid fa-cart-shopping"></i></a>
-                    </li>
-                </ul>
+            <ul class="nav_links">
+                <li class="nav_item">
+                    <a class="nav_link" href="#home">Home</a>
+                </li>
+                <li class="nav_item">
+                    <a class="nav_link" href="#categories">Kategorien</a>
+                </li>
+                <li class="nav_item">
+                    <a class="nav_link" href="#food-products">Food</a>
+                </li>
+                <li class="nav_item">
+                    <a class="nav_link" href="#non-food-products">Non-Food</a>
+                </li>
+                <li class="nav_item">
+                    <a class="nav_link" href="#services"><span>Services</span></a>
+                </li>
+            </ul>
+        </nav>
+
+        <div class="icons">
+            <div class="fas fa-bars" id="menu-btn"></div>
+            <div class="fas fa-search" id="search-btn"></div>
+            <div class="fas fa-shopping-cart" id="cart-btn"></div>
+            <div class="fas fa-user" id="login-btn"></div>
+        </div>
+
+        <form action="" class="search-form">
+            <input type="search" id="search-box" placeholder="Suche">
+            <label for="search-box" class="fas fa-search"></label>
+        </form>
+        
+        <div class="shopping-cart">
+            <div class="box">
+                <i class="fas fa-trash"></i>
+                <img src="img/food/food 01.jpg" alt="">
+                <div class="content">
+                    <h3>Salatgurke</h3>
+                    <span class="price">0.79 €</span>
+                    <span class="quantity">Stück : 1</span>
+                </div>
             </div>
-        </nav>     
+            <div class="total"> Insgesamt : 0.79 € </div>
+            <a href="" class="btn">Zur Kasse</a>
+        </div>
+
+        <form action="" class="login-form">
+            <h3>Anmeldung</h3>
+            <input type="email" placeholder="E-Mail-Adresse" class="box">
+            <input type="password" placeholder="Passwort" class="box">
+            <p>Passwort <a href="#"> vegsessen?</a></p>
+            <p>Sie haben noch kein Konto? <a href="registration.html">Registrieren</a></p>
+            <input type="submit" value="Anmelden" class="btn">
+        </form>
     </header>
-    
-    <div class="main_container">
-        <h1 class="main_title">Willkommen bei bognarit</h2>
-        <div class="products">
-            <h1 class="food_title">Food Produkte</h1>
-            <div class="foods">
-                <div class="food_products">
-                    <a href="#">
-                        <span>Obst - Gemüse</span>
-                        <img src="img/categories/obst-gemuese.jpg" alt="obst_gemuese" width="300" height="300">
-                    </a>                    
-                </div>
-                <div class="food_products">
-                    <a href="#">
-                        <span>Milchprodukte</span>
-                        <img src="img/categories/milchprodukte.jpg" alt="milchprodukte" width="300" height="300">
-                </div>
-                <div class="food_products">
-                    <a href="#">
-                        <span>Getränke</span>
-                        <img src="img/categories/getraenke.jpg" alt="getraenke" width="300" height="300">
-                </div>
-                <div class="food_products">
-                    <a href="#">
-                        <span>Süßigkeiten</span>
-                        <img src="img/categories/suessigkeiten.jpg" alt="suessigkeiten" width="300" height="300">
-                </div>
-                <div class="food_products">
-                    <a href="#">
-                        <span>Fleischprodukte</span>
-                        <img src="img/categories/fleischprodukte.jpg" alt="fleischprodukte" width="300" height="300">
-                    </a>
-                </div>
-            </div>
 
-            <h1 class="non_food_title">Non-Food Produkte</h1>
-            <div class="non_foods">
-                <div class="non_food_products">
-                    <a href="#">
-                        <span>Möbel</span>
-                        <img src="img/categories/moebel.jpg" alt="moebel" width="300" height="300">
-                    </a>
+    <section class="home" id="home">
+        <div class="content">
+            <h3>Food und Non-Food <span> Produkte für Sie </span></h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipising elit. Aliquam libero nostrum vaniam facere tempore nisi.</p>
+        </div>
+    </section>
+
+    <section class="categories" id="categories">
+        <h1 class="heading">Food &#129028;<span>Produktkategorien</span>&#129030; Non-Food</h1>
+        <div class="swiper products-cat-slider">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide box">
+                    <img src="img/categories/cat. food 01.jpg" alt="">
+                    <h3>Obst - Gemüse</h3>
+                    <a href="" class="btn">Zu Angebot</a>
                 </div>
-                <div class="non_food_products">
-                    <a href="#">
-                        <span>Elektronische Geräte</span>
-                        <img src="img/categories/elektronische_geraete.jpg" alt="elektronische_geraete" width="300" height="300">
-                    </a>
+                <div class="swiper-slide box">
+                    <img src="img/categories/cat. food 02.jpg" alt="">
+                    <h3>Milchprodukte</h3>
+                    <a href="" class="btn">Zu Angebot</a>
                 </div>
-                <div class="non_food_products">
-                    <a href="#">
-                        <span>Uhren</span>
-                        <img src="img/categories/uhren.jpg" alt="uhren" width="300" height="300">
-                     </a>
+                <div class="swiper-slide box">
+                    <img src="img/categories/cat. food 03.jpg" alt="">
+                    <h3>Getränke</h3>
+                    <a href="" class="btn">Zu Angebot</a>
                 </div>
-                <div class="non_food_products">
-                    <a href="#">
-                        <span>Haushalt</span>
-                        <img src="img/categories/haushalt.jpg" alt="haushalt" width="300" height="300">
-                    </a>
+                <div class="swiper-slide box">
+                    <img src="img/categories/cat. food 04.jpg" alt="">
+                    <h3>Süßigkeiten</h3>
+                    <a href="" class="btn">Zu Angebot</a>
                 </div>
-                <div class="non_food_products">
-                    <a href="#">
-                        <span>Drogerie</span>
-                        <img src="img/categories/drogerie.jpg" alt="drogerie" width="300" height="300">
-                    </a>
+                <div class="swiper-slide box">
+                    <img src="img/categories/cat. food 05.jpg" alt="">
+                    <h3>Fleischprodukte</h3>
+                    <a href="" class="btn">Zu Angebot</a>
                 </div>
             </div>
         </div>
-    </div>
-
-    <div class="pay_order">
-        <div class="main_pay">
-            <h2 class="pay_order_title">Bezahlungsarten</h2>
-            <img src="img/payment_options.jpg" class="pay_img" width="750" height="500" alt="pay" name="pay" />
+        <br>
+        <div class="swiper products-cat-slider">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide box">
+                    <img src="img/categories/cat. non-food 01.jpg" alt="">
+                    <h3>Möbel</h3>
+                    <a href="" class="btn">Zu Angebot</a>
+                </div>
+                <div class="swiper-slide box">
+                    <img src="img/categories/cat. non-food 02.jpg" alt="">
+                    <h3>Elektronische Geräte</h3>
+                    <a href="" class="btn">Zu Angebot</a>
+                </div>
+                <div class="swiper-slide box">
+                    <img src="img/categories/cat. non-food 03.jpg" alt="">
+                    <h3>Uhren</h3>
+                    <a href="" class="btn">Zu Angebot</a>
+                </div>
+                <div class="swiper-slide box">
+                    <img src="img/categories/cat. non-food 04.jpg" alt="">
+                    <h3>Haushalt</h3>
+                    <a href="" class="btn">Zu Angebot</a>
+                </div>
+                <div class="swiper-slide box">
+                    <img src="img/categories/cat. non-food 05.jpg" alt="">
+                    <h3>Drogerie</h3>
+                    <a href="" class="btn">Zu Angebot</a>
+                </div>
+            </div>
         </div>
-        <div class="main_order">
-            <h2 class="pay_order_title">Bestellung per App</h2>
-            <img src="img/order_with_mobile.jpg" style="border-radius: 7px;" width="750" height="500" alt="app" name="app" />
-        </div>
-    </div>
+    </section>
 
-    <div class="newsletter">
-        <h2 class="news_title">Newsletter - immer gut informiert sein</h2>
-        <div class="news_wrapper">
+    <section class="online-order">
+        <img src="img/online_order.jpg" alt="">
+    </section>
+
+    <section class="food-products" id="food-products">
+        <h1 class="heading"> Food <span>Produkte</span></h1>
+        <div class="swiper food-slider">
+
+        </div>
+    </section>
+
+    <section class="non-food-products" id="non-food-products">
+        <h1 class="heading"> Non-Food <span>Produkte</span></h1>
+        <div class="swiper non-food-slider">
+
+        </div>
+    </section>
+
+    <section class="services" id="services">
+        <h1 class="heading"> unsere <span> Services </span></h1>
+        <div class="box-container">
+            <div class="box">
+                <img src="img/payment_options.jpg" alt="">
+                <h2>Zahlungsarten</h2>
+                <p>Lorem ipsum dolor sit amet, consetetur sadipscing elit. Deserunt, earum!</p>
+            </div>
+            <div class="box">
+                <img src="img/order_with_mobile.jpg" alt="">
+                <h2>Bestellung per App</h2>
+                <p>Lorem ipsum dolor sit amet, consetetur sadipscing elit. Deserunt, earum!</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="newsletter">
+        <h1 class="heading">Newsletter - <span>immer gut informiert</span> sein</h2>
+        <div class="box-container">
             <form class="news_form">
                 <div>
-                    <label for="email" id="email_text">Ihre E-Mail-Adresse:</label><br />
-                    <input type="email" id="email" name="email" required="required"/>
+                    <label for="email" id="email-text">Ihre E-Mail-Adresse:</label><br />
+                    <input type="email" id="email" name="email" placeholder="E-Mail-Adresse" required="required"/>
                 </div>
                 <div>
                     <input style="width: 15px;" type="checkbox" name="accept" id="accept" required="required" />				
-                    <label for="understand" id="understand">Ja, ich bin damit einverstanden, dass bognarit.net aus meinem Kauf-
-                    und Nutzungsverhalten personenbezogene Profile erstellt, um Werbe- und Webangebote besser auf meine
-                    persönlichen Interessen auszurichten. Die Einwilligung können Sie jederzeit widerrufen.<b style='color: red'>*</b></label>
+                    <label for="accept-text" id="accept-text">Ja, ich bin damit einverstanden, dass bognarit.net aus meinem Kauf-
+                        und Nutzungsverhalten personenbezogene Profile erstellt, um Werbe- und Webangebote besser auf meine
+                        persönlichen Interessen auszurichten. Die Einwilligung können Sie jederzeit widerrufen.<b style='color: red'>*</b></label>
                 </div>
                 <div>
-                    <input id="request" type="submit" name="request" value="Newsletter anfordern">
+                    <input id="request" type="submit" class="btn" name="request" value="Newsletter anfordern">
                 </div>
             </form>
-            <div class="benefit">
-                <div class="benefit_text">
-                    <h2 class="benefit_title">Vorteile von Newsletter:</h2>
+            <div class="benefits">
+                <div class="benefit-text">
+                    <h2>Vorteile von Newsletter:</h2>
                     <p><a>✔</a> Aktuelle Angebote</p>
                     <p><a>✔</a> Exklusive Rabatte</p>
                     <p><a>✔</a> Individuelle Coupons</p>
@@ -152,40 +201,36 @@
                 </div>
             </div>
         </div>
-    </div>
+    </section>
 
-    <footer class="footer">
-        <ul class="footer_nav">
-            <li class="footer_item">
-                <a class="footer_link" href="#">Feedback</a>
-            </li>
-            <li class="footer_item">
-                <a class="footer_link" href="#">Reklamation</a>
-            </li>
-            <li class="footer_item">
-                <a class="footer_link" href="#">Impressum</a>
-            </li>
-            <li class="footer_item">
-                <a class="footer_link" href="#">AGB</a>
-            </li>
-            <li class="footer_item">
-                <a class="footer_link" href="#">Datenschutz</a>
-            </li>
-        </ul>
-    </footer>
-
-    <div class="modal hidden">
-        <button class="btn--close-modal">&times;</button>
-        <ul>
-            <li class="modal_links">
-                <a href="#" class="modal_link">Anmelden</a>
-            </li>
-            <li class="modal_links">
-                <a href="registration.html" class="modal_link">Registrieren</a> 
-            </li>
-        </ul>
-    </div>
-    <div class="overlay hidden"></div>
-
+    <section class="footer">
+        <div class="box-container">
+            <div class="box">
+                <h3>Social Media</h3>
+                <p>Besuchen Sie uns auf unseren Kanälen</p>
+                <div class="share">
+                    <a href="" class="fab fa-facebook-f"></a>
+                    <a href="" class="fab fa-twitter"></a>
+                    <a href="" class="fab fa-instagram"></a>
+                    <a href="" class="fab fa-linkedin"></a>
+                </div>
+            </div>
+            <div class="box">
+                <h3>Kontakt</h3>
+                <a href="" class="links"> <i class="fas fa-phone"></i> +123-456-7890 </a>
+                <a href="" class="links"> <i class="fas fa-phone"></i> +111-222-3333 </a>
+                <a href="" class="links"> <i class="fas fa-envelope"></i> hamburg@hamburg.com </a>
+                <a href="" class="links"> <i class="fas fa-map-marker-alt"></i> Hamburg, Deutschland - 20202 </a>
+            </div>
+            <div class="box">
+                <h3>Informationen</h3>
+                <a href="" class="links">Unternehmen</a>
+                <a href="" class="links">Feedback</a>
+                <a href="" class="links">Reklamation</a>
+                <a href="" class="links">AGB</a>
+                <a href="" class="links">Datenschutz</a>
+            </div>
+        </div>
+    </section>
 </body>
 </html>
