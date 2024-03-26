@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;600&display=swap');
 
 :root{
-    --orange: #ff4d00;
+    --orange: #fd7d14;
     --black: #131218;
     --light-color: #666;
     --box-shadow: 0 .5rem 1.5rem rgba(0,0,0,.1);
@@ -18,7 +18,7 @@
     outline: none;
     border: none;
     text-decoration: none;
-    text-transform: capitalize;
+    /* text-transform: capitalize; */
     transition: all .2s linear;
 }
 
@@ -29,7 +29,9 @@ html{
     scroll-padding-top: 7rem;
 }
 
-body{ background: #f1f2f3; }
+body{
+    background: #f1f2f3;
+}
 
 section{
     padding: 2rem 9%;
@@ -39,7 +41,7 @@ section{
     text-align: center;
     padding: 2rem 0;
     padding-bottom: 3rem;
-    font-size: 3.5rem;
+    font-size: 2.5rem;
     color: var(--black);
 }
 
@@ -54,10 +56,10 @@ section{
 .btn{
     margin-top: 1rem;
     display: inline-block;
-    padding: .8rem 3rem;
-    font-size: 1.7rem;
+    padding: .6rem 2rem;
+    font-size: 1.4rem;
     border-radius: .5rem;
-    border: .2rem solid var(--black);
+    border: .15rem solid var(--black);
     color: var(--black);
     cursor: pointer;
     background: none;
@@ -85,7 +87,9 @@ section{
     padding-top: 1.5rem;
 }
 
-.header .navbar{ padding: 0 5rem; }
+.header .navbar{
+    padding: 0 5rem;
+}
 
 .header .navbar .nav_links{
     display: flex;
@@ -99,7 +103,7 @@ section{
 }
 
 .header .navbar .nav_links .nav_item a{
-    font-size: 1.7rem;
+    font-size: 1.5rem;
     font-weight: bold;
     margin-right: 1.8rem;
     color: #fff;
@@ -109,20 +113,36 @@ section{
     color: var(--orange);
 }
 
-.header .icons div{
+.header .icons a{
     color: #fff;
-    font-size: 1.7rem;
+    font-size: 1.5rem;
     margin-left: .8rem;
     cursor: pointer;
     text-align: center;
+    position: relative;
 }
 
-.header .icons div:hover{
+.header .icons a:hover{
     color: var(--orange);
 }
 
 #menu-btn{
     display: none;
+}
+
+.total-items-in-cart{
+    position: absolute;
+    top: -7px;
+    right: -7px;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: .8rem;
+    background: #ff0000;
+    font-weight: 500;
 }
 
 .header .search-form.active{
@@ -133,8 +153,8 @@ section{
 .header .search-form{
     position: absolute;
     top: 110%; right: -110%;
-    width: 50rem;
-    height: 4.5rem;
+    width: 35rem;
+    height: 3.2rem;
     background: #fff;
     border-radius: .5rem;
     overflow: hidden;
@@ -148,14 +168,14 @@ section{
     width: 100%;
     background: none;
     text-transform: none;
-    font-size: 1.6rem;
+    font-size: 1.3rem;
     color: var(--black);
-    padding: 0 1.5rem;
+    padding: 0 1.3rem;
 }
 
 .header .search-form label{
-    font-size: 2.2rem;
-    padding-right: 1.5rem;
+    font-size: 1.4rem;
+    padding-right: 1.3rem;
     color: var(--black);
     cursor: pointer;
 }
@@ -163,10 +183,10 @@ section{
 .header .shopping-cart{
     position: absolute;
     top: 110%; right: -110%;
-    padding: 1rem;
+    padding: 1.5rem;
     border-radius: .5rem;
     box-shadow: var(--box-shadow);
-    width: 35rem;
+    width: 30rem;
     background: #fff;
 }
 
@@ -184,11 +204,11 @@ section{
 }
 
 .header .shopping-cart .box img{
-    height: 10rem;
+    height: 7rem;
 }
 
 .header .shopping-cart .box .fa-trash{
-    font-size: 2rem;
+    font-size: 1.6rem;
     position: absolute;
     top:50%; right: 2rem;
     cursor: pointer;
@@ -202,24 +222,52 @@ section{
 
 .header .shopping-cart .box .content h3{
     color: var(--black);
-    font-size: 1.7rem;
-    padding-bottom: 1rem;
+    font-size: 1.5rem;
+    padding-bottom: .3rem;
 }
 
 .header .shopping-cart .box .content span{
     color: var(--light-color);
-    font-size: 1.6rem;
+    font-size: 1.3rem;
 }
 
-.header .shopping-cart .box .content .quantity{
-    padding-left: 1rem;
+.header .shopping-cart .cart-items{
+    max-height: calc(100vh - 350px);
+    overflow: auto;
 }
 
-.header .shopping-cart .total{
-    font-size: 2.5rem;
+.header .shopping-cart .units{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.header .shopping-cart .units .unit-btn{
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background: rgb(237, 230, 230);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 10px;
+    cursor: pointer;    
+}
+
+.header .shopping-cart .units .unit-btn:hover{
+    background: var(--orange);
+    color: #fff;
+}
+
+.header .shopping-cart .units .unit-nr{
+    margin-right: 10px;    
+}
+
+.header .shopping-cart .total-sum{
+    font-size: 1.8rem;
     padding: 1rem 0;
     text-align: center;
-    margin: 1rem;
+    border-top: var(--border);
 }
 
 .header .shopping-cart .btn{
@@ -231,10 +279,10 @@ section{
 .header .login-form{
     position: absolute;
     top: 110%; right: -110%;
-    padding: 2rem;
+    padding: 1rem 2rem 2rem 2rem;
     border-radius: .5rem;
     box-shadow: var(--box-shadow);
-    width: 30rem;
+    width: 20rem;
     background: #fff;
     text-align: center;
 }
@@ -244,32 +292,8 @@ section{
     transition: .4s linear;
 }
 
-.header .login-form h3{
-    font-size: 2.5rem;
-    text-transform: uppercase;
-    color: var(--black);
-}
-
-.header .login-form .box{
+.header .login-form .btn{
     width: 100%;
-    margin: .7rem 0;
-    background: #eee;
-    border-radius: .5rem;
-    padding: 1rem;
-    font-size: 1.6rem;
-    color: var(--black);
-    text-transform: none;
-}
-
-.header .login-form p{
-    font-size: 1.4rem;
-    padding: .5rem 0;
-    color: var(--light-color);
-}
-
-.header .login-form p a{
-    color: var(--orange);
-    text-decoration: underline;
 }
 
 /* home */
@@ -337,8 +361,9 @@ section{
 }
 
 .categories .products-cat-slider .box h3{
-    font-size: 2.5rem;
+    font-size: 1.7rem;
     color: var(--black);
+    margin-top: .5rem;
 }
 
 /* online order */
@@ -352,22 +377,18 @@ section{
 }
 
 /* food products */
-.food-slider{
+.foods{
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
     gap: 1.5rem;
     padding: 1rem;
 }
 
-.food-slider:first-child{
+.foods:first-child{
     margin-bottom: 2rem;
 }
 
-.food-slider .swiper-wrapper{
-    margin-right: 2rem;
-}
-
-.food-slider .swiper-wrapper .box{
+.foods .food-wrapper .food-box{
     background: #fff;
     border-radius: .5rem;
     text-align: center;
@@ -378,62 +399,84 @@ section{
     transition: .2s linear;
 }
 
-.food-slider .swiper-wrapper .box:hover{
+.foods .food-wrapper .food-box:hover{
 	outline-offset: 0rem;
     outline: var(--outline-hover);
 }
 
-.food-slider .swiper-wrapper .box .title{
-    font-size: 2.5rem;
+.foods .food-wrapper .food-box img{
+    height: 15rem;
+}
+
+.foods .food-wrapper .food-box .title{
+    font-size: 1.7rem;
     color: var(--black);
 }
 
-.food-slider .swiper-wrapper .box .price{
-    font-size: 2rem;
+.foods .food-wrapper .food-box .price{
+    font-size: 1.3rem;
     color: var(--light-color);
     padding: .5rem 0;
 }
 
-/* non-food products */
-.non-food-slider{
+/* blogs */
+.blogs .box-container {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
     gap: 1.5rem;
-    padding: 1rem;
 }
 
-.non-food-slider:first-child{
-    margin-bottom: 2rem;
-}
-
-.non-food-slider .swiper-wrapper{
-    margin-right: 2rem;
-}
-
-.non-food-slider .swiper-wrapper .box{
-    background: #fff;
+.blogs .box-container .box{
+    overflow: hidden;
     border-radius: .5rem;
-    text-align: center;
-    padding: 3rem 6rem;
-    outline-offset: -1rem;
-    outline: var(--outline);
     box-shadow: var(--box-shadow);
-    transition: .2s linear;
+    background: #fff;
 }
 
-.non-food-slider .swiper-wrapper .box:hover{
-	outline-offset: 0rem;
-    outline: var(--outline-hover);
+.blogs .box-container .box img{
+    height: 25rem;
+    width: 100%;
+    object-fit: cover;
 }
 
-.non-food-slider .swiper-wrapper .box .title{
-    font-size: 2.5rem;
+.blogs .box-container .box .content{
+    padding: 2rem;
+}
+
+.blogs .box-container .box .content .icons{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-bottom: 1.5rem;
+    margin-bottom: 1rem;
+    border-bottom: var(--border);
+}
+
+.blogs .box-container .box .content .icons a{
+    color: var(--light-color);
+    font-size: 1.3rem;
+}
+
+.blogs .box-container .box .content .icons a:hover{
     color: var(--black);
 }
 
-.non-food-slider .swiper-wrapper .box .price{
-    font-size: 2rem;
+.blogs .box-container .box .content .icons a i{
+    color: var(--orange);
+    padding-right: .5rem;
+}
+
+.blogs .box-container .box .content h3{
+    line-height: 1.8;
+    color: var(--black);
+    font-size: 1.7rem;
+    padding: .5rem 0;
+}
+
+.blogs .box-container .box .content p{
+    line-height: 1.8;
     color: var(--light-color);
+    font-size: 1.3rem;
     padding: .5rem 0;
 }
 
@@ -461,18 +504,18 @@ section{
 }
 
 .services .box-container .box img{
-    height: 25rem;
+    height: 20rem;
     border: 1px solid #000;
 }
 
 .services .box-container .box h2{
-    font-size: 2.5rem;
+    font-size: 1.7rem;
     line-height: 1.8;
     color: var(--black);
 }
 
 .services .box-container .box p{
-    font-size: 1.5rem;
+    font-size: 1.3rem;
     line-height: 1.8;
     color: var(--light-color);
     padding: 1rem 0;
@@ -494,23 +537,23 @@ section{
 }
 
 .newsletter .box-container #email-text{
-    font-size: 2.5rem;
+    font-size: 1.7rem;
     color: var(--black);
 }
 
 .newsletter .box-container #email{
-    width: 80%;
+    width: 90%;
     margin: 1rem 0;
     background: #eee;
     border-radius: .5rem;
-    padding: 1rem;
-    font-size: 1.6rem;
+    padding: .8rem 1rem;
+    font-size: 1.3rem;
     color: var(--black);
     text-transform: none;
 }
 
 .newsletter .box-container #accept-text{
-    font-size: 1.4rem;
+    font-size: 1.3rem;
     padding: .5rem 0;
     text-transform: none;
     color: var(--light-color);
@@ -522,7 +565,9 @@ section{
 }
 
 .newsletter .box-container .benefits{
-    margin-left: 15%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .newsletter .box-container .benefits .benefit-text h2{
@@ -532,7 +577,7 @@ section{
 } 
 
 .newsletter .box-container .benefits .benefit-text p{
-    font-size: 1.4rem;
+    font-size: 1.3rem;
     line-height: 2.2rem;
 }
 
@@ -552,14 +597,14 @@ section{
 }
 
 .footer .box-container .box h3{
-    font-size: 2.5rem;
+    font-size: 1.7rem;
     color: var(--black);
     padding: 1rem 0;
 }
 
 .footer .box-container .box p{
-    line-height: 1.8;
-    font-size: 1.5rem;
+    line-height: 1.6;
+    font-size: 1.3rem;
     color: var(--light-color);
     padding: 1rem 0;
 }
@@ -578,7 +623,7 @@ section{
 
 .footer .box-container .box .links{
     display: block;
-    font-size: 1.5rem;
+    font-size: 1.3rem;
     color: var(--light-color);
     padding: 1rem 0;
 }
@@ -641,8 +686,18 @@ section{
         display: grid;
     }
 
+    .total-items-in-cart{
+        width: 12px;
+        height: 12px;
+    }
+
+    .header .shopping-cart .units .unit-btn{
+        width: 12px;
+        height: 12px;
+    }
+
     .newsletter .box-container .benefits{
-        margin-left: 0;
+        display: block;
     }
 }
 

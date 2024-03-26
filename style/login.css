@@ -31,7 +31,6 @@ body{
 }
 
 .header{
-	position: fixed;
     top: 0; left: 0; right: 0;
     z-index: 1000;
     display: flex;
@@ -48,9 +47,9 @@ body{
 
 .container{
 	position: relative;
-	margin: 8% auto 2%;
+	margin: 4% auto;
 	border-radius: .5rem;
-	max-width: 48rem;
+	max-width: 40rem;
 	background: #ffffff;
 	box-shadow: var(--box-shadow);
 	padding: 2rem;
@@ -78,29 +77,6 @@ body{
 
 .container .form .input-box label b{
 	color: var(--red);
-}
-
-.container .form .input-box select{
-	position: relative;
-	height: 3.2rem;
-	width: 100%;
-	font-size: 1rem;
-	margin: .5rem 0;
-	border-radius: .5rem;
-    padding: 0 1rem;
-	border: var(--border);
-	background: none;
-}
-
-#gender{
-	position: relative;
-	height: 50px;
-	font-size: 1rem;
-	margin: .5rem 0;
-	border-radius: .5rem;
-    padding: 0 1rem;
-	border: var(--border);
-	background: none;
 }
 
 .container .form .input-box input{
@@ -132,18 +108,18 @@ body{
 	display: none;
 }
 
-.container .form .column{
-	display: flex;
-	column-gap: 15px;
+.container .form .pass-forget{
+    margin: 1rem 0;
 }
 
-.container .form .ask-box{
-	line-height: 30px;
+.container .form .pass-forget a{
+    font-size: 1rem;
+    color: var(--black);
+    cursor: pointer;    
 }
 
-p#required{
-	color: var(--red);
-	margin: 1rem 0;
+.container .form .pass-forget a span{
+    text-decoration: underline;
 }
 
 .container .form .send-box {
@@ -174,12 +150,13 @@ p#required{
 }
 
 @media (max-width:768px){
-	.container{
-		margin: 22% auto 7%;
-	}
+    #menu-btn{
+        display: inline-block;
+    }
 
-	.container .form .column{
-		flex-wrap: wrap;
+	.container{
+		margin-top: 22%;
+        max-width: 50rem;
 	}
 
 	.container .form .input-box label{
@@ -195,23 +172,9 @@ p#required{
 		height: 5.5rem;
 	}
 
-	#gender-label{
-		font-size: 1.4rem;
-	}
-
-	#gender{
-		font-size: 1.4rem;
-		height: 5.5rem;
-	}
-
-	.container .form .ask-box{
-		font-size: 1.3rem;
-	}
-	
-	p#required{
-		font-size: 1.3rem;
-	}
-
+    .container .form .pass-forget a{
+        font-size: 1.4rem;
+    }
 }
 
 @media (max-width:450px){

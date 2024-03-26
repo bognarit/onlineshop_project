@@ -1,93 +1,106 @@
 [
     {
-        "id": "1",
-        "title": "Stuhl",
+        "id": 1,
+        "name": "Stuhl",
         "category": "Möbel",
         "price": 16.90,
+        "quantity": "Stk",
         "image": "./img/non-food/non-food 01.jpg"
     },
     {
-        "id": "2",
-        "title": "Tisch",
+        "id": 2,
+        "name": "Tisch",
         "category": "Möbel",
         "price": 129.49,
+        "quantity": "Stk",
         "image": "./img/non-food/non-food 02.jpg"
     },
     {
-        "id": "3",
-        "title": "Bett",
+        "id": 3,
+        "name": "Bett",
         "category": "Möbel",
         "price": 229.99,
+        "quantity": "Stk",
         "image": "./img/non-food/non-food 03.jpg"
     },
     {
-        "id": "4",
-        "title": "Schreibtischleuchte",
+        "id": 4,
+        "name": "Schreibtischleuchte",
         "category": "Elektronische Geräte",
         "price": 19.99,
+        "quantity": "Stk",
         "image": "./img/non-food/non-food 04.jpg"
     },
     {
-        "id": "5",
-        "title": "Radio",
+        "id": 5,
+        "name": "Radio",
         "category": "Elektronische Geräte",
         "price": 49.99,
+        "quantity": "Stk",
         "image": "./img/non-food/non-food 05.jpg"
     },
     {
-        "id": "6",
-        "title": "Fernseher",
+        "id": 6,
+        "name": "Fernseher",
         "category": "Elektronische Geräte",
         "price": 59.99,
+        "quantity": "Stk",
         "image": "./img/non-food/non-food 06.jpg"
     },
     {
-        "id": "7",
-        "title": "Telefon",
+        "id": 7,
+        "name": "Telefon",
         "category": "Elektronische Geräte",
         "price": 27.99,
+        "quantity": "Stk",
         "image": "./img/non-food/non-food 07.jpg"
     },
     {
-        "id": "8",
-        "title": "Uhr 1",
+        "id": 8,
+        "name": "Uhr 1",
         "category": "Uhren",
         "price": 24.99,
+        "quantity": "Stk",
         "image": "./img/non-food/non-food 08.jpg"
     },
     {
-        "id": "9",
-        "title": "Uhr 2",
+        "id": 9,
+        "name": "Uhr 2",
         "category": "Uhren",
         "price": 49.99,
+        "quantity": "Stk",
         "image": "./img/non-food/non-food 09.jpg"
     },
     {
-        "id": "10",
-        "title": "Flüssigseife",
+        "id": 10,
+        "name": "Flüssigseife",
         "category": "Haushalt",
         "price": 2.25,
+        "quantity": "Stk",
         "image": "./img/non-food/non-food 10.jpg"
     },
     {
-        "id": "11",
-        "title": "Seife",
+        "id": 11,
+        "name": "Seife",
         "category": "Haushalt",
         "price": 0.99,
+        "quantity": "Stk",
         "image": "./img/non-food/non-food 11.jpg"
     },
     {
-        "id": "12",
-        "title": "Waschmittel",
+        "id": 12,
+        "name": "Waschmittel",
         "category": "Haushalt",
         "price": 14.99,
+        "quantity": "Stk",
         "image": "./img/non-food/non-food 12.jpg"
     },
     {
-        "id": "13",
-        "title": "Zahnbürste",
+        "id": 13,
+        "name": "Zahnbürste",
         "category": "Drogerie",
         "price": 1.99,
+        "quantity": "Stk",
         "image": "./img/non-food/non-food 13.jpg"
     }
 ]

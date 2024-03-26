@@ -1,20 +1,21 @@
 'use strict';
 
-import { foods } from "../script/food-script.js";
-import { nonFoods } from "../script/non-food-script.js";
-
 const searchForm = document.querySelector('.search-form');
+const searchBox = document.getElementById('search-box');
 const shoppingCart = document.querySelector('.shopping-cart');
+const cartItemsEl = document.querySelector('.cart-items');
 const loginForm = document.querySelector('.login-form');
 const navbar = document.querySelector('.navbar');
-const foodSection = document.querySelector('.food-slider');
-const nonFoodSection = document.querySelector('.non-food-slider');
+const foodsEl = document.querySelector('.foods');
+const totalSumEl = document.querySelector('.total-sum');
+const totalItemsInCartEl = document.querySelector('.total-items-in-cart')
 
 document.querySelector('#search-btn').onclick = () => {
     searchForm.classList.toggle('active');
     shoppingCart.classList.remove('active');
     loginForm.classList.remove('active');
     navbar.classList.remove('active');
+    searchBox.value = '';
 };
 
 document.querySelector('#cart-btn').onclick = () => {
@@ -33,53 +34,120 @@ document.querySelector('#login-btn').onclick = () => {
 
 document.querySelector('#menu-btn').onclick = () => {
     navbar.classList.toggle('active');
-    shoppingCart.classList.remove('active');
     searchForm.classList.remove('active');
+    shoppingCart.classList.remove('active');
     loginForm.classList.remove('active');
 }
 
 window.onscroll = () => {
     searchForm.classList.remove('active');
-    shoppingCart.classList.toggle('active');
+    shoppingCart.classList.remove('active');
     loginForm.classList.remove('active');
     navbar.classList.remove('active');
 }
 
-const foodProducts = function (food) {
+let foods = [];
+fetch('./products.json')
+    .then(results => results.json())
+    .then(data => {
+        foods = data;
+        addFoodDataToHTML();
+    });
+
+function addFoodDataToHTML() {
     foods.forEach(food => {
-        foodSection.insertAdjacentHTML("beforeend",
-        `<div class="swiper-wrapper">
-            <div class="swiper-slide box">
-                <img src="${food.image}" width="300" height="300">
-                <h2 class="title">${food.title}</h2>
+        foodsEl.innerHTML +=
+        `<div class="food-wrapper">
+            <div class="food-box">
+                <img src="${food.image}" alt="${food.name}">
+                <h2 class="title">${food.name}</h2>
                 <div class="price">${food.price} €</div>
-                <a href="#" class="btn">In den Warenkorb</a>
+                <div class="btn" onclick="addToCart(${food.id})">In den Warenkorb</div>
             </div>
-        </div>
-        `
-        )
+        </div>`
     })
 };
 
-foodProducts(foods);
+let cart = JSON.parse(localStorage.getItem('CART')) || [];
+updateCart();
 
-const nonFoodProducts = function (nonfood) {
-    nonFoods.forEach(nonfood => {
-        nonFoodSection.insertAdjacentHTML("beforeend",
-        `<div class="swiper-wrapper">
-            <div class="swiper-slide box">
-                <img src="${nonfood.image}" width="300" height="300">
-                <h2 class="title">${nonfood.title}</h2>
-                <div class="price">${nonfood.price} €</div>
-                <a href="#" class="btn">In den Warenkorb</a>
-            </div>
-        </div>
-        `
-        )
-    })
+function addToCart(id) {
+    if (cart.some(item => item.id === id)) {
+        changeNumberOfUnits('plus', id);
+    } else {
+        const item = foods.find(food => food.id === id);
+        cart.push({
+            ...item,
+            numberOfUnits: 1
+        });
+    }
+    updateCart();
 };
 
-nonFoodProducts(nonFoods);
+function updateCart (){
+    renderCartItems();
+    renderTotalSum();
+
+    localStorage.setItem('CART', JSON.stringify(cart));
+}
+
+function renderTotalSum () {
+    let totalPrice = 0,
+       totalItems = 0;
+   
+       cart.forEach(item => {
+           totalPrice += item.price * item.numberOfUnits;
+           totalItems += item.numberOfUnits;
+       });
+       totalSumEl.innerHTML = `Insgesamt: ${totalPrice.toFixed(2)} €`
+       totalItemsInCartEl.innerHTML = totalItems;
+   }
+
+function renderCartItems () {
+    cartItemsEl.innerHTML = '';
+    cart.forEach(item => {
+        cartItemsEl.innerHTML += `
+            <div class="box">
+                <i class="fas fa-trash" onclick="removeItemFromCart(${item.id})"></i>
+                <img src="${item.image}" alt="${item.name}">
+                <div class="content">
+                    <h3>${item.name}</h3>
+                    <span class="price-quantity">${item.price} € / ${item.quantity}</span>
+                </div>
+                <div class="units">
+                    <div class="unit-btn minus" onclick="changeNumberOfUnits('minus', ${item.id})">-</div>
+                    <div class="unit-nr">${item.numberOfUnits}</div>
+                    <div class="unit-btn plus" onclick="changeNumberOfUnits('plus', ${item.id})">+</div>
+                </div>
+            </div>
+            `
+        }
+    )
+};
+
+function removeItemFromCart(id) {
+    cart = cart.filter(item => item.id !== id);
+    updateCart();
+}
+
+function changeNumberOfUnits (action, id) {
+    cart = cart.map(item => {
+        let numberOfUnits = item.numberOfUnits;
+        if (item.id === id) {
+            if (action === 'minus' && numberOfUnits > 1) {
+                numberOfUnits--;
+            } else if (action === 'plus') {
+                // && numberOfUnits > item.instock
+                numberOfUnits++;
+            }
+        }
+        return ({
+            ...item,
+            numberOfUnits
+        });
+    })
+    updateCart();
+};
 
 var swiper = new Swiper(".products-cat-slider", {
   loop: true,
@@ -101,24 +169,3 @@ var swiper = new Swiper(".products-cat-slider", {
     },
   },
 });
-
-// var swiper = new Swiper(".food-slider", {
-//     loop: true,
-//     spaceBetween: 20,
-//     autoplay: {
-//         delay: 7500,
-//         disableOnInteraction: false,
-//     },
-//     centeredSlides: true,
-//     breakpoints: {
-//         0: {
-//         slidesPerView: 1,
-//         },
-//         768: {
-//         slidesPerView: 2,
-//         },
-//         1020: {
-//         slidesPerView: 3,
-//         },
-//     },
-//     });

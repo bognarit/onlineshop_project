@@ -134,5 +134,109 @@
         "price": 5.99,
         "quantity": "Kg",
         "image": "./img/food/food 17.jpg"
+    },
+    {
+        "id": 18,
+        "name": "Stuhl",
+        "category": "Möbel",
+        "price": 16.90,
+        "quantity": "Stk",
+        "image": "./img/non-food/non-food 01.jpg"
+    },
+    {
+        "id": 19,
+        "name": "Tisch",
+        "category": "Möbel",
+        "price": 129.49,
+        "quantity": "Stk",
+        "image": "./img/non-food/non-food 02.jpg"
+    },
+    {
+        "id": 20,
+        "name": "Bett",
+        "category": "Möbel",
+        "price": 229.99,
+        "quantity": "Stk",
+        "image": "./img/non-food/non-food 03.jpg"
+    },
+    {
+        "id": 21,
+        "name": "Schreibtischleuchte",
+        "category": "Elektronische Geräte",
+        "price": 19.99,
+        "quantity": "Stk",
+        "image": "./img/non-food/non-food 04.jpg"
+    },
+    {
+        "id": 22,
+        "name": "Radio",
+        "category": "Elektronische Geräte",
+        "price": 49.99,
+        "quantity": "Stk",
+        "image": "./img/non-food/non-food 05.jpg"
+    },
+    {
+        "id": 23,
+        "name": "Fernseher",
+        "category": "Elektronische Geräte",
+        "price": 59.99,
+        "quantity": "Stk",
+        "image": "./img/non-food/non-food 06.jpg"
+    },
+    {
+        "id": 24,
+        "name": "Telefon",
+        "category": "Elektronische Geräte",
+        "price": 27.99,
+        "quantity": "Stk",
+        "image": "./img/non-food/non-food 07.jpg"
+    },
+    {
+        "id": 25,
+        "name": "Uhr 1",
+        "category": "Uhren",
+        "price": 24.99,
+        "quantity": "Stk",
+        "image": "./img/non-food/non-food 08.jpg"
+    },
+    {
+        "id": 26,
+        "name": "Uhr 2",
+        "category": "Uhren",
+        "price": 49.99,
+        "quantity": "Stk",
+        "image": "./img/non-food/non-food 09.jpg"
+    },
+    {
+        "id": 27,
+        "name": "Flüssigseife",
+        "category": "Haushalt",
+        "price": 2.25,
+        "quantity": "Stk",
+        "image": "./img/non-food/non-food 10.jpg"
+    },
+    {
+        "id": 28,
+        "name": "Seife",
+        "category": "Haushalt",
+        "price": 0.99,
+        "quantity": "Stk",
+        "image": "./img/non-food/non-food 11.jpg"
+    },
+    {
+        "id": 29,
+        "name": "Waschmittel",
+        "category": "Haushalt",
+        "price": 14.99,
+        "quantity": "Stk",
+        "image": "./img/non-food/non-food 12.jpg"
+    },
+    {
+        "id": 30,
+        "name": "Zahnbürste",
+        "category": "Drogerie",
+        "price": 1.99,
+        "quantity": "Stk",
+        "image": "./img/non-food/non-food 13.jpg"
     }
 ]

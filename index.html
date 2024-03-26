@@ -6,7 +6,7 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <link rel="stylesheet" href="style/index.css" />
-    <script defer src="script/script.js" type="module"></script>
+    <script defer src="script/script.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <title>bognarit.net</title>
 </head>
@@ -22,10 +22,10 @@
                     <a class="nav_link" href="#categories">Kategorien</a>
                 </li>
                 <li class="nav_item">
-                    <a class="nav_link" href="#food-products">Food</a>
+                    <a class="nav_link" href="#products">Produkte</a>
                 </li>
                 <li class="nav_item">
-                    <a class="nav_link" href="#non-food-products">Non-Food</a>
+                    <a class="nav_link" href="#blogs">Blogs</a>
                 </li>
                 <li class="nav_item">
                     <a class="nav_link" href="#services"><span>Services</span></a>
@@ -34,50 +34,51 @@
         </nav>
 
         <div class="icons">
-            <div class="fas fa-bars" id="menu-btn"></div>
-            <div class="fas fa-search" id="search-btn"></div>
-            <div class="fas fa-shopping-cart" id="cart-btn"></div>
-            <div class="fas fa-user" id="login-btn"></div>
+            <a id="menu-btn">
+                <i class="fas fa-bars"></i>
+            </a>
+            <a id="search-btn">
+                <i class="fas fa-search"></i>
+            </a>
+            <a id="cart-btn">
+                <i class="fas fa-shopping-cart"></i>
+                <span class="total-items-in-cart">0</span>
+            </a>
+            <a id="login-btn">
+                <i class="fas fa-user"></i>
+            </a>
         </div>
 
         <form action="" class="search-form">
             <input type="search" id="search-box" placeholder="Suche">
             <label for="search-box" class="fas fa-search"></label>
         </form>
-        
+
         <div class="shopping-cart">
-            <div class="box">
-                <i class="fas fa-trash"></i>
-                <img src="img/food/food 01.jpg" alt="">
-                <div class="content">
-                    <h3>Salatgurke</h3>
-                    <span class="price">0.79 €</span>
-                    <span class="quantity">Stück : 1</span>
-                </div>
+            <div class="cart-items">
+
             </div>
-            <div class="total"> Insgesamt : 0.79 € </div>
-            <a href="" class="btn">Zur Kasse</a>
+            <div class="cart-footer">
+                <div class="total-sum">Insgesamt: 0.79 €</div>
+                <a href="" class="btn">Zur Kasse</a>
+            </div>
         </div>
 
         <form action="" class="login-form">
-            <h3>Anmeldung</h3>
-            <input type="email" placeholder="E-Mail-Adresse" class="box">
-            <input type="password" placeholder="Passwort" class="box">
-            <p>Passwort <a href="#"> vegsessen?</a></p>
-            <p>Sie haben noch kein Konto? <a href="registration.html">Registrieren</a></p>
-            <input type="submit" value="Anmelden" class="btn">
+            <a href="login.html"class="btn">Anmelden</a>
+            <a href="registration.html"class="btn">Registrieren</a>
         </form>
     </header>
 
     <section class="home" id="home">
-        <div class="content">
+        <!-- <div class="content">
             <h3>Food und Non-Food <span> Produkte für Sie </span></h1>
             <p>Lorem ipsum dolor sit amet consectetur adipising elit. Aliquam libero nostrum vaniam facere tempore nisi.</p>
-        </div>
+        </div> -->
     </section>
 
     <section class="categories" id="categories">
-        <h1 class="heading">Food &#129028;<span>Produktkategorien</span>&#129030; Non-Food</h1>
+        <h1 class="heading"><span> Produktkategorien </span></h1>
         <div class="swiper products-cat-slider">
             <div class="swiper-wrapper">
                 <div class="swiper-slide box">
@@ -117,7 +118,7 @@
                 </div>
                 <div class="swiper-slide box">
                     <img src="img/categories/cat. non-food 02.jpg" alt="">
-                    <h3>Elektronische Geräte</h3>
+                    <h3>Elektrogeräte</h3>
                     <a href="" class="btn">Zu Angebot</a>
                 </div>
                 <div class="swiper-slide box">
@@ -143,22 +144,57 @@
         <img src="img/online_order.jpg" alt="">
     </section>
 
-    <section class="food-products" id="food-products">
-        <h1 class="heading"> Food <span>Produkte</span></h1>
-        <div class="swiper food-slider">
-
+    <section class="products" id="products">
+        <h1 class="heading"> Unsere <span>Produkte</span></h1>
+        <div class="foods">
+        <!-- Product List -->
         </div>
     </section>
 
-    <section class="non-food-products" id="non-food-products">
-        <h1 class="heading"> Non-Food <span>Produkte</span></h1>
-        <div class="swiper non-food-slider">
-
+    <section class="blogs" id="blogs">
+        <h1 class="heading"> Unsere <span>Blogs</span> </h1>
+        <div class="box-container">
+            <div class="box">
+                <img src="img/blogs 01.jpg" alt="">
+                <div class="content">
+                    <div class="icons">
+                        <a href="#"> <i class="fas fa-user"></i>Autor: Anna</a>
+                        <a href="#"> <i class="fas fa-calendar"></i> 1th may, 2021 </a>
+                    </div>
+                    <h3>Tipps für eine gesunde Ernährung</h3>
+                    <p>At vero eos et accusam et justo duo dolores et ea rebum.</p>
+                    <a href="#" class="btn">Zum Artikel</a>
+                </div>
+            </div>
+            <div class="box">
+                <img src="img/blogs 02.jpg" alt="">
+                <div class="content">
+                    <div class="icons">
+                        <a href="#"> <i class="fas fa-user"></i>Autor: Claudia</a>
+                        <a href="#"> <i class="fas fa-calendar"></i> 22. November 2023 </a>
+                    </div>
+                    <h3>Rezepturen von Feinen Backwaren</h3>
+                    <p>At vero eos et accusam et justo duo dolores et ea rebum.</p>
+                    <a href="#" class="btn">Zum Artikel</a>
+                </div>
+            </div>
+            <div class="box">
+                <img src="img/blogs 03.jpg" alt="">
+                <div class="content">
+                    <div class="icons">
+                        <a href="#"> <i class="fas fa-user"></i>Autor: Hans</a>
+                        <a href="#"> <i class="fas fa-calendar"></i> 1. Februar 2024 </a>
+                    </div>
+                    <h3>Neue Konzepte für kleine Wohnungen</h3>
+                    <p>At vero eos et accusam et justo duo dolores et ea rebum.</p>
+                    <a href="#" class="btn">Zum Artikel</a>
+                </div>
+            </div>
         </div>
     </section>
 
     <section class="services" id="services">
-        <h1 class="heading"> unsere <span> Services </span></h1>
+        <h1 class="heading"> Unsere <span> Services </span></h1>
         <div class="box-container">
             <div class="box">
                 <img src="img/payment_options.jpg" alt="">
@@ -224,11 +260,11 @@
             </div>
             <div class="box">
                 <h3>Informationen</h3>
-                <a href="" class="links">Unternehmen</a>
-                <a href="" class="links">Feedback</a>
-                <a href="" class="links">Reklamation</a>
-                <a href="" class="links">AGB</a>
-                <a href="" class="links">Datenschutz</a>
+                <a href="#" class="links">Unternehmen</a>
+                <a href="#" class="links">Feedback</a>
+                <a href="complaint.html" class="links">Reklamation</a>
+                <a href="#" class="links">AGB</a>
+                <a href="#" class="links">Datenschutz</a>
             </div>
         </div>
     </section>
