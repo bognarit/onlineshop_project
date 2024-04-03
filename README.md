@@ -7,11 +7,12 @@
 - registration page
 - login page
 - complaint page
+- checkout page
+- add products from cart to checkout
 
 # The ongoing parts of projects
 
 - product details page
-- cart page and process to checkout
 - process to login
 - process to registration
 - food and non-food products in two diffente groups

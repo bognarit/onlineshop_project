@@ -82,7 +82,7 @@ function addToCart(id) {
         });
     }
     updateCart();
-};
+}
 
 function updateCart (){
     renderCartItems();
@@ -101,7 +101,7 @@ function renderTotalSum () {
        });
        totalSumEl.innerHTML = `Insgesamt: ${totalPrice.toFixed(2)} €`
        totalItemsInCartEl.innerHTML = totalItems;
-   }
+}
 
 function renderCartItems () {
     cartItemsEl.innerHTML = '';
@@ -123,7 +123,7 @@ function renderCartItems () {
             `
         }
     )
-};
+}
 
 function removeItemFromCart(id) {
     cart = cart.filter(item => item.id !== id);
@@ -147,7 +147,7 @@ function changeNumberOfUnits (action, id) {
         });
     })
     updateCart();
-};
+}
 
 var swiper = new Swiper(".products-cat-slider", {
   loop: true,
