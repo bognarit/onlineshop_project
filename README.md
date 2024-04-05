@@ -9,6 +9,7 @@
 - complaint page
 - checkout page
 - add products from cart to checkout
+- newsletter confirmation
 
 # The ongoing parts of projects
 

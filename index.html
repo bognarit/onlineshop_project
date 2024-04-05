@@ -215,7 +215,7 @@
             <form class="news_form">
                 <div>
                     <label for="email" id="email-text">Ihre E-Mail-Adresse:</label><br />
-                    <input type="email" id="email" name="email" placeholder="E-Mail-Adresse" required="required"/>
+                    <input type="email" id="email-address" name="email" placeholder="E-Mail-Adresse" required="required"/>
                 </div>
                 <div>
                     <input style="width: 15px;" type="checkbox" name="accept" id="accept" required="required" />				
@@ -224,7 +224,7 @@
                         persönlichen Interessen auszurichten. Die Einwilligung können Sie jederzeit widerrufen.<b style='color: red'>*</b></label>
                 </div>
                 <div>
-                    <input id="request" type="submit" class="btn" name="request" value="Newsletter anfordern">
+                    <input id="show-confirmation" type="submit" class="btn" name="request" value="Newsletter anfordern">
                 </div>
             </form>
             <div class="benefits">
@@ -268,5 +268,12 @@
             </div>
         </div>
     </section>
+
+    <div class="confirmation hidden">
+        <h2>Danke fürs Abonnieren!</h2>
+        <p>Eine Bestätigungs-E-Mail wurde an <span id="user-email"></span> gesendet. Bitte öffnen Sie sie und klicken Sie auf die Schaltfläche darin, um Ihr Abonnement zu bestätigen.</p>
+        <input id="close-confirmation" type="submit" class="btn" name="close-confirmation" value="Schließen">
+    </div>
+    <div class="overlay hidden"></div>
 </body>
 </html>

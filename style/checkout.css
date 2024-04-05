@@ -6,6 +6,7 @@
     --box-shadow: 0 .5rem 1.5rem rgba(0,0,0,.1);
     --border: 1px solid #ccc;
 	--red: #ff0000;
+    --white: #fff;
 }
 
 *{
@@ -69,7 +70,7 @@ body{
     overflow: hidden;
     border-radius: .5rem;
     box-shadow: var(--box-shadow);
-    background: #fff;
+    background: var(--white);
 }
 
 .container .cart-items .box{
@@ -118,7 +119,7 @@ body{
 
 .container .cart-items .units .unit-btn:hover{
     background: var(--orange);
-    color: #fff;
+    color: var(--white);
 }
 
 .container .cart-items .units .unit-nr{
@@ -160,7 +161,7 @@ body{
     overflow: hidden;
     border-radius: .5rem;
     box-shadow: var(--box-shadow);
-    background: #fff;
+    background: var(--white);
     padding: 2rem;
     line-height: 2rem;
     height: 18rem;
@@ -197,7 +198,7 @@ body{
 
 .btn:hover{
     background: var(--orange);
-    color: #fff;
+    color: var(--white);
 }
 
 

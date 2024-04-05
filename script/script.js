@@ -10,6 +10,15 @@ const foodsEl = document.querySelector('.foods');
 const totalSumEl = document.querySelector('.total-sum');
 const totalItemsInCartEl = document.querySelector('.total-items-in-cart')
 
+// newsletter confirmation
+const confirmationModal = document.querySelector('.confirmation');
+const confirmationOverlay = document.querySelector('.overlay');
+const closeConfirmationBtn = document.getElementById('close-confirmation');
+const showConfirmationBtn = document.getElementById('show-confirmation');
+const emailAddressBox = document.getElementById('email-address');
+const acceptCheckbox = document.getElementById('accept');
+const userEmail = document.getElementById('user-email');
+
 document.querySelector('#search-btn').onclick = () => {
     searchForm.classList.toggle('active');
     shoppingCart.classList.remove('active');
@@ -168,4 +177,28 @@ var swiper = new Swiper(".products-cat-slider", {
       slidesPerView: 3,
     },
   },
+});
+
+function showConfirmation () {
+    const email = emailAddressBox.value.trim();
+    userEmail.innerText = email;
+    confirmationOverlay.classList.remove('hidden');
+    confirmationModal.classList.remove('hidden');
+}
+
+function closeConfirmation () {
+    confirmationOverlay.classList.add('hidden');
+    confirmationModal.classList.add('hidden');
+    emailAddressBox.value = '';
+    acceptCheckbox.checked = false;
+}
+
+showConfirmationBtn.addEventListener('click', showConfirmation);
+closeConfirmationBtn.addEventListener('click', closeConfirmation);
+confirmationOverlay.addEventListener('click', closeConfirmation);
+
+document.addEventListener('keydown', function (e) {
+    if (e.key === 'Escape' && !confirmationModal.classList.contains('hidden')) {
+        closeConfirmation();
+    }
 });

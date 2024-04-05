@@ -6,6 +6,7 @@
     --box-shadow: 0 .5rem 1.5rem rgba(0,0,0,.1);
     --border: 1px solid #ccc;
 	--red: #ff0000;
+	--white: #fff;
 }
 
 *{
@@ -51,7 +52,7 @@ body{
 	margin: 8% auto 2%;
 	border-radius: .5rem;
 	max-width: 48rem;
-	background: #ffffff;
+	background: var(--white);
 	box-shadow: var(--box-shadow);
 	padding: 2rem;
 }
@@ -151,7 +152,7 @@ p#required{
 
 .container .form .send-box .btn:hover {
     background: var(--orange);
-    color: #fff;
+    color: var(--white);
 }
 
 /* media queries */
