@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <link rel="stylesheet" href="style/complaint.css" />
     <script defer src="script/complaint.js" type="module"></script>
+    <link rel="shortcut icon" href="data:image/x-icon;," type="image/x-icon">
     <title>Reklamation bei bognarit</title>
 </head>
 <body>
@@ -38,7 +39,7 @@
             </div>
             <div class="input-box">
                 <label for="email">E-Mail<b>*</b></label>
-                <input type="email" name="email" id="email" placeholder="E-Mail" required/>
+                <input type="email" name="email" id="email-address" placeholder="E-Mail" required/>
             </div>
 			<div class="input-box">
 				<label for="reason-of-comp">Betreff<b>*</b></label>
@@ -56,9 +57,17 @@
 			</div>
 			<p id="required">* Pflichtfelder</p>
 			<div class="send-box">
-                <input id="request" type="submit" class="btn" name="request" value="Absenden">
+                <input id="show-confirmation" type="submit" class="btn" name="request" value="Absenden">
             </div>
 		</form>
     </main>
+
+    <div class="confirmation hidden">
+        <h2>Danke für Ihre Nachricht!</h2>
+        <p>Ihre Reklamationsmeldung ist eingegangen. Wir werden uns spätestens in 36 Stunden mit Ihnen in Verbindung setzen.</p>
+        <p>Eine Bestätigungs-E-Mail wurde an <span id="user-email"></span> gesendet. Bitte öffnen Sie sie und klicken Sie auf die Schaltfläche darin, um Ihre Nachricht zu bestätigen.</p>
+        <input id="close-confirmation" type="submit" class="btn" name="close-confirmation" value="Schließen">
+    </div>
+    <div class="overlay hidden"></div>
 </body>
 </html>

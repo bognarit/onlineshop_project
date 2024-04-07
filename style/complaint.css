@@ -31,6 +31,23 @@ body{
 	background: #f1f2f3;
 }
 
+.btn{
+    margin-top: 1rem;
+    display: inline-block;
+    padding: .6rem 2rem;
+    font-size: 1.4rem;
+    border-radius: .5rem;
+    border: .15rem solid var(--black);
+    color: var(--black);
+    cursor: pointer;
+    background: none;
+}
+
+.btn:hover {
+    background: var(--orange);
+    color: var(--white);
+}
+
 .header{
 	position: fixed;
     top: 0; left: 0; right: 0;
@@ -155,6 +172,52 @@ p#required{
     color: var(--white);
 }
 
+/* newsletter confirmation */
+.hidden{
+    display: none;
+}
+
+.confirmation{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 58%;
+    background-color: #f1f2f3;
+    padding: 4rem 5rem;
+    border-radius: .5rem;
+    box-shadow: 0 3rem 5rem rgba(0, 0, 0, 0.3);
+    z-index: 10;
+    text-align: center;
+}
+
+.confirmation h2{
+    font-size: 2rem;
+    color: var(--black);
+}
+
+.confirmation p{
+    font-size: 1.3rem;
+    color: var(--black);
+    line-height: 1.6;
+    padding: .5rem 0;
+}
+
+.confirmation p span{
+    font-weight: bold;
+}
+
+.overlay{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    backdrop-filter: blur(3px);
+    z-index: 5;
+}
+
 /* media queries */
 @media (max-width:991px){
     html{
@@ -197,6 +260,17 @@ p#required{
         font-size: 1.4rem;
     }
 
+    .confirmation{
+        width: 95%;
+    }
+
+    .confirmation h2{
+        font-size: 2.2rem;
+    }
+    
+    .confirmation p{
+        font-size: 1.6rem;
+    }
 }
 
 @media (max-width:450px){
