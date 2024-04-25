@@ -378,6 +378,37 @@ section{
 }
 
 /* food products */
+.products .search-form{
+    width: 35rem;
+    height: 3.2rem;
+    background: var(--white);
+    border-radius: .5rem;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: var(--box-shadow);
+    margin: auto;
+    margin-bottom: 1%;
+}
+
+.products .search-form input{
+    height: 100%;
+    width: 100%;
+    background: none;
+    text-transform: none;
+    font-size: 1.3rem;
+    color: var(--black);
+    padding: 0 1.3rem;
+}
+
+.products .search-form label{
+    font-size: 1.4rem;
+    padding-right: 1.3rem;
+    color: var(--black);
+    cursor: pointer;
+}
+
 .foods{
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
@@ -682,6 +713,7 @@ section{
     background-color: rgba(0, 0, 0, 0.6);
     backdrop-filter: blur(3px);
     z-index: 5;
+    position: fixed;
 }
 
 /* media queries */

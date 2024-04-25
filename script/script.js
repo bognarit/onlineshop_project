@@ -19,6 +19,7 @@ const emailAddressBox = document.getElementById('email-address');
 const acceptCheckbox = document.getElementById('accept');
 const userEmail = document.getElementById('user-email');
 
+// menu - search, cart, login
 document.querySelector('#search-btn').onclick = () => {
     searchForm.classList.toggle('active');
     shoppingCart.classList.remove('active');
@@ -202,3 +203,24 @@ document.addEventListener('keydown', function (e) {
         closeConfirmation();
     }
 });
+
+const search = () => {
+    const searchBox = document.getElementById('search-item').value.toUpperCase();
+    const foodsEl = document.querySelector('.foods');
+    const productBox = document.querySelectorAll('.food-box');
+    const productName = foodsEl.getElementsByTagName('h2');
+
+    for (let i = 0; i < productName.length; i++) {
+        const match = productBox[i].getElementsByTagName('h2')[0];
+
+        if (match) {
+            const textValut = match.textContent || match.innerHTML;
+
+            if(textValut.toUpperCase().indexOf(searchBox) > -1) {
+                productBox[i].style.display = '';
+            } else {
+                productBox[i].style.display = 'none';
+            }
+        }
+    }
+}

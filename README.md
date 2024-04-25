@@ -11,6 +11,7 @@
 - add products from cart to checkout
 - newsletter confirmation
 - complaint confirmation
+- product search
 
 # The ongoing parts of projects
 
