@@ -104,7 +104,7 @@ function updateCart (){
 function renderTotalSum () {
     let totalPrice = 0,
        totalItems = 0;
-   
+
        cart.forEach(item => {
            totalPrice += item.price * item.numberOfUnits;
            totalItems += item.numberOfUnits;
@@ -180,18 +180,20 @@ var swiper = new Swiper(".products-cat-slider", {
   },
 });
 
-function showConfirmation () {
-    const email = emailAddressBox.value.trim();
-    userEmail.innerText = email;
-    confirmationOverlay.classList.remove('hidden');
-    confirmationModal.classList.remove('hidden');
+function showConfirmation (e) {
+    if (emailAddressBox.value.trim() === '' || !acceptCheckbox.checked) {
+        e.preventDefault();
+        alert('Bitte füllen Sie das Feld aus!');
+    } else {
+        const email = emailAddressBox.value.trim();
+        userEmail.innerText = email;
+        confirmationModal.classList.add('active');
+    }
 }
 
 function closeConfirmation () {
-    confirmationOverlay.classList.add('hidden');
-    confirmationModal.classList.add('hidden');
+    confirmationModal.classList.remove('active');
     emailAddressBox.value = '';
-    acceptCheckbox.checked = false;
 }
 
 showConfirmationBtn.addEventListener('click', showConfirmation);
@@ -199,7 +201,7 @@ closeConfirmationBtn.addEventListener('click', closeConfirmation);
 confirmationOverlay.addEventListener('click', closeConfirmation);
 
 document.addEventListener('keydown', function (e) {
-    if (e.key === 'Escape' && !confirmationModal.classList.contains('hidden')) {
+    if (e.key === 'Escape') {
         closeConfirmation();
     }
 });

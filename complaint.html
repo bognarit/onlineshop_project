@@ -57,17 +57,19 @@
 			</div>
 			<p id="required">* Pflichtfelder</p>
 			<div class="send-box">
-                <input id="show-confirmation" type="submit" class="btn" name="request" value="Absenden">
+                <a href="#" id="show-confirmation" class="btn">Absenden</a>
             </div>
 		</form>
     </main>
 
-    <div class="confirmation hidden">
-        <h2>Danke für Ihre Nachricht!</h2>
-        <p>Ihre Reklamationsmeldung ist eingegangen. Wir werden uns spätestens in 36 Stunden mit Ihnen in Verbindung setzen.</p>
-        <p>Eine Bestätigungs-E-Mail wurde an <span id="user-email"></span> gesendet. Bitte öffnen Sie sie und klicken Sie auf die Schaltfläche darin, um Ihre Nachricht zu bestätigen.</p>
-        <input id="close-confirmation" type="submit" class="btn" name="close-confirmation" value="Schließen">
+    <div class="confirmation">
+        <div class="overlay"></div>
+        <div class="content">
+            <h2>Danke für Ihre Nachricht!</h2>
+            <p>Ihre Reklamationsmeldung ist eingegangen. Wir werden uns spätestens in 36 Stunden mit Ihnen in Verbindung setzen.</p>
+            <p>Eine Bestätigungs-E-Mail wurde an <span id="user-email"></span> gesendet. Bitte öffnen Sie sie und klicken Sie auf die Schaltfläche darin, um Ihre Nachricht zu bestätigen.</p>
+            <a href="" id="close-confirmation" class="btn">Schließen</a>
+        </div>
     </div>
-    <div class="overlay hidden"></div>
 </body>
 </html>

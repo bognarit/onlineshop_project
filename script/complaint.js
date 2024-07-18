@@ -1,10 +1,9 @@
 'use strict';
 
-// newsletter confirmation
 const confirmationModal = document.querySelector('.confirmation');
 const confirmationOverlay = document.querySelector('.overlay');
-const closeConfirmationBtn = document.getElementById('close-confirmation');
 const showConfirmationBtn = document.getElementById('show-confirmation');
+const closeConfirmationBtn = document.getElementById('close-confirmation');
 const firstNameBox = document.getElementById('first-name');
 const surnameBox = document.getElementById('surname');
 const telefonBox = document.getElementById('telefon');
@@ -32,16 +31,19 @@ reasonOfComplaint.forEach(item => {
     reasons.appendChild(option);
 });
 
-function showConfirmation () {
-	const email = emailAddressBox.value.trim();
-    userEmail.innerText = email;
-    confirmationOverlay.classList.remove('hidden');
-    confirmationModal.classList.remove('hidden');
+function showConfirmation (e) {
+    if (firstNameBox.value.trim() === '' || surnameBox.value.trim() === '' || emailAddressBox.value.trim() === '') {
+        e.preventDefault();
+        alert('Bitte füllen Sie alle Felder aus!');
+    } else {
+        const email = emailAddressBox.value.trim();
+        userEmail.innerText = email;
+        confirmationModal.classList.add('active');
+    }
 }
 
 function closeConfirmation () {
-    confirmationOverlay.classList.add('hidden');
-    confirmationModal.classList.add('hidden');
+    confirmationModal.classList.remove('active');
     firstNameBox.value = surnameBox.value = telefonBox.value = '';
     emailAddressBox.value = orderNrBox.value = messageBox.value = '';
 }
@@ -51,7 +53,7 @@ closeConfirmationBtn.addEventListener('click', closeConfirmation);
 confirmationOverlay.addEventListener('click', closeConfirmation);
 
 document.addEventListener('keydown', function (e) {
-    if (e.key === 'Escape' && !confirmationModal.classList.contains('hidden')) {
+    if (e.key === 'Escape') {
         closeConfirmation();
     }
 });

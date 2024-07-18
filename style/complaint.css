@@ -152,7 +152,7 @@ p#required{
 	margin: 1rem 0;
 }
 
-.container .form .send-box {
+.container .form .send-box{
 	text-align: center;
 }
 
@@ -167,56 +167,61 @@ p#required{
     background: none;
 }
 
-.container .form .send-box .btn:hover {
+.container .form .send-box .btn:hover{
     background: var(--orange);
     color: var(--white);
 }
 
-/* newsletter confirmation */
-.hidden{
+/* complaint confirmation */
+.confirmation .overlay{
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.7);
+    z-index: 1;
     display: none;
 }
 
-.confirmation{
+.confirmation .content{
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%) scale(0);
     width: 58%;
-    background-color: #f1f2f3;
+    background: #f1f2f3;
     padding: 4rem 5rem;
     border-radius: .5rem;
-    box-shadow: 0 3rem 5rem rgba(0, 0, 0, 0.3);
-    z-index: 10;
+    z-index: 2;
     text-align: center;
+    box-sizing: border-box;
 }
 
-.confirmation h2{
+.confirmation .content h2{
     font-size: 2rem;
     color: var(--black);
 }
 
-.confirmation p{
+.confirmation .content p{
     font-size: 1.3rem;
     color: var(--black);
     line-height: 1.6;
     padding: .5rem 0;
 }
 
-.confirmation p span{
+.confirmation .content p span{
     font-weight: bold;
+    text-decoration: underline;
 }
 
-.overlay{
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.6);
-    backdrop-filter: blur(3px);
-    z-index: 5;
-    position: fixed;
+.confirmation.active .overlay {
+    display: block;
+}
+
+.confirmation.active .content {
+    /* transition: all 300ms ease-in-out; */
+    transform: translate(-50%, -50%) scale(1);
 }
 
 /* media queries */
