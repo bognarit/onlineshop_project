@@ -44,7 +44,7 @@
             </div>
             <div class="input-box">
                 <label for="email">E-Mail<b>*</b></label>
-                <input type="email" name="email" id="email" placeholder="E-Mail" required/>
+                <input type="email" name="email" id="email-address" placeholder="E-Mail" required/>
             </div>
             <div class="input-box">
                 <label for="password">Passwort<b>*</b></label>
@@ -92,9 +92,18 @@
             </div>
             <p id="required">* Pflichtfelder</p>
             <div class="send-box">
-                <input id="request" type="submit" class="btn" name="request" value="Registrieren">
+                <a href="#" id="show-confirmation" class="btn">Registrieren</a>
             </div>
         </form>
     </main>
+
+    <div class="confirmation">
+        <div class="overlay"></div>
+        <div class="content">
+            <h2>Danke für Ihre Registration!</h2>
+            <p>Eine Bestätigungs-E-Mail wurde an <span id="user-email"></span> gesendet. Bitte öffnen Sie sie und klicken Sie auf die Schaltfläche darin, um Ihre Registration zu bestätigen.</p>
+            <a href="" id="close-confirmation" class="btn">Schließen</a>
+        </div>
+    </div>
 </body>
 </html>

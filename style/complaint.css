@@ -156,22 +156,6 @@ p#required{
 	text-align: center;
 }
 
-.container .form .send-box .btn{
-    margin-top: .5rem;
-    padding: .6rem 2rem;
-    font-size: 1.4rem;
-    border-radius: .5rem;
-    border: .15rem solid var(--black);
-    color: var(--black);
-    cursor: pointer;
-    background: none;
-}
-
-.container .form .send-box .btn:hover{
-    background: var(--orange);
-    color: var(--white);
-}
-
 /* complaint confirmation */
 .confirmation .overlay{
     position: fixed;

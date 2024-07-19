@@ -31,6 +31,23 @@ body{
 	background: #f1f2f3;
 }
 
+.btn{
+    margin-top: 1rem;
+    display: inline-block;
+    padding: .6rem 2rem;
+    font-size: 1.4rem;
+    border-radius: .5rem;
+    border: .15rem solid var(--black);
+    color: var(--black);
+    cursor: pointer;
+    background: none;
+}
+
+.btn:hover {
+    background: var(--orange);
+    color: var(--white);
+}
+
 .header{
 	position: fixed;
     top: 0; left: 0; right: 0;
@@ -151,20 +168,56 @@ p#required{
 	text-align: center;
 }
 
-.container .form .send-box .btn{
-    margin-top: .5rem;
-    padding: .6rem 2rem;
-    font-size: 1.4rem;
-    border-radius: .5rem;
-    border: .15rem solid var(--black);
-    color: var(--black);
-    cursor: pointer;
-    background: none;
+/* complaint confirmation */
+.confirmation .overlay{
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.7);
+    z-index: 1;
+    display: none;
 }
 
-.container .form .send-box .btn:hover {
-    background: var(--orange);
-    color: var(--white);
+.confirmation .content{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    width: 58%;
+    background: #f1f2f3;
+    padding: 4rem 5rem;
+    border-radius: .5rem;
+    z-index: 2;
+    text-align: center;
+    box-sizing: border-box;
+}
+
+.confirmation .content h2{
+    font-size: 2rem;
+    color: var(--black);
+}
+
+.confirmation .content p{
+    font-size: 1.3rem;
+    color: var(--black);
+    line-height: 1.6;
+    padding: .5rem 0;
+}
+
+.confirmation .content p span{
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+.confirmation.active .overlay {
+    display: block;
+}
+
+.confirmation.active .content {
+    /* transition: all 300ms ease-in-out; */
+    transform: translate(-50%, -50%) scale(1);
 }
 
 /* media queries */

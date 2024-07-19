@@ -11,6 +11,13 @@ const eyeIcon = document.querySelector('.eye-icon');
 const passwordEl = document.getElementById('pass-input');
 const showPassBtn = document.getElementById('show-pass');
 const noShowPassBtn = document.getElementById('no-show-pass');
+const confirmationModal = document.querySelector('.confirmation');
+const confirmationOverlay = document.querySelector('.overlay');
+const closeConfirmationBtn = document.getElementById('close-confirmation');
+const showConfirmationBtn = document.getElementById('show-confirmation');
+const acceptCheckbox = document.getElementById('accept');
+const emailAddressBox = document.getElementById('email-address');
+const userEmail = document.getElementById('user-email');
 
 europeCountries.forEach(item => {
     const option = document.createElement('option');
@@ -29,5 +36,31 @@ eyeIcon.addEventListener('click', function (e) {
         passwordEl.type = 'password';
         showPassBtn.style.display = 'none';
         noShowPassBtn.style.display = 'block';
+    }
+});
+
+function showConfirmation (e) {
+    if (emailAddressBox.value.trim() === '' || !acceptCheckbox.checked) {
+        e.preventDefault();
+        alert('Bitte füllen Sie das Feld aus!');
+    } else {
+        const email = emailAddressBox.value.trim();
+        userEmail.innerText = email;
+        confirmationModal.classList.add('active');
+    }
+}
+
+function closeConfirmation () {
+    confirmationModal.classList.remove('active');
+    // emailAddressBox.value = '';
+}
+
+showConfirmationBtn.addEventListener('click', showConfirmation);
+closeConfirmationBtn.addEventListener('click', closeConfirmation);
+confirmationOverlay.addEventListener('click', closeConfirmation);
+
+document.addEventListener('keydown', function (e) {
+    if (e.key === 'Escape') {
+        closeConfirmation();
     }
 });

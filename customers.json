@@ -1,0 +1,62 @@
+[
+    {
+        "id": 1,
+        "gender": "Frau",
+        "firstName": "Angela",
+        "surname": "Hofmann",
+        "telefon": "13142564395", 
+        "birthday": "23.11.1972",
+        "email": "angelah@world.com",
+        "password": "1111",
+        "street": "Bachstraße",
+        "houseNr": "14",
+        "zip": "30871",
+        "city": "München",
+        "country": "Deutschland"
+    },
+    {
+        "id": 2,
+        "gender": "Herr",
+        "firstName": "Hans",
+        "surname": "Müller",
+        "telefon": "17243652719", 
+        "birthday": "02.04.1985",
+        "email": "müller@anwalt.de",
+        "password": "2222",
+        "street": "Lichtweg",
+        "houseNr": "38",
+        "zip": "5248",
+        "city": "Köln",
+        "country": "Deutschland"
+    },
+    {
+        "id": 3,
+        "gender": "Frau",
+        "firstName": "Julian",
+        "surname": "Klein",
+        "telefon": "17132428631", 
+        "birthday": "16.07.1980",
+        "email": "jklein@mail.de",
+        "password": "3333",
+        "street": "Sonnenallee",
+        "houseNr": "43",
+        "zip": "20429",
+        "city": "Frankfurt",
+        "country": "Deutschland"
+    },
+    {
+        "id": 4,
+        "gender": "Herr",
+        "firstName": "Thomas",
+        "surname": "Jungfern",
+        "telefon": "17132428631", 
+        "birthday": "09.01.1991",
+        "email": "thomas@baufirma.com",
+        "password": "4444",
+        "street": "Dammweg",
+        "houseNr": "2",
+        "zip": "02617",
+        "city": "Stuttgart",
+        "country": "Deutschland"
+    }
+]
