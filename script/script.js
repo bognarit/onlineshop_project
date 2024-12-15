@@ -206,7 +206,7 @@ document.addEventListener('keydown', function (e) {
     }
 });
 
-const search = () => {
+function search () {
     const searchBox = document.getElementById('search-item').value.toUpperCase();
     const foodsEl = document.querySelector('.foods');
     const productBox = document.querySelectorAll('.food-box');
@@ -226,3 +226,13 @@ const search = () => {
         }
     }
 }
+
+// document.getElementById('search-item').addEventListener("input", e => {
+//     const value = e.target.value.toLowerCase()
+//     foods.forEach(food => {
+//       const isVisible =
+//         food.name.toLowerCase().includes(value)
+//         // user.email.toLowerCase().includes(value)
+//     //   food.element.classList.toggle("hide", !isVisible)
+//     })
+//   })

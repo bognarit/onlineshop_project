@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;600&display=swap');
 
-:root{
+:root {
     --orange: #fd7d14;
     --black: #131218;
     --box-shadow: 0 .5rem 1.5rem rgba(0,0,0,.1);
@@ -9,7 +9,7 @@
     --white: #fff;
 }
 
-*{
+* {
 	font-family: 'Poppins', sans-serif;
     margin: 0;
     padding: 0;
@@ -20,18 +20,18 @@
 	transition: all .2s linear;
 }
 
-html{
+html {
     font-size: 62,5%;
     overflow-x: hidden;
     scroll-behavior: smooth;
     scroll-padding-top: 7rem;
 }
 
-body{
+body {
 	background: #f1f2f3;
 }
 
-.header{
+.header {
     top: 0; left: 0; right: 0;
     z-index: 1000;
     display: flex;
@@ -42,11 +42,11 @@ body{
     box-shadow: var(--box-shadow);
 }
 
-.header .logo{
+.header .logo {
 	padding-top: 1.5rem;
 }
 
-.container{
+.container {
 	position: relative;
 	margin: 4% auto;
 	border-radius: .5rem;
@@ -56,31 +56,31 @@ body{
 	padding: 2rem;
 }
 
-.container h2{
+.container h2 {
 	padding-bottom: 1.2rem;
 	font-size: 2rem;
 	text-align: center;
 	border-bottom: var(--border);
 }
 
-.container .form{
+.container .form {
 	margin-top: 1.8rem;
 }
 
-.container .form .input-box{
+.container .form .input-box {
 	width: 100%;
 	margin-top: 1.3rem;
 }
 
-.container .form .input-box label{
+.container .form .input-box label {
 	color: var(--black);
 }
 
-.container .form .input-box label b{
+.container .form .input-box label b {
 	color: var(--red);
 }
 
-.container .form .input-box input{
+.container .form .input-box input {
 	position: relative;
 	height: 50px;
 	width: 100%;
@@ -93,33 +93,33 @@ body{
     padding: 0 1rem;
 }
 
-.container .form .input-box .pass-wrapper{
+.container .form .input-box .pass-wrapper {
 	overflow: hidden;
     display: flex;
     align-items: center;	
 }
 
-.container .form .input-box .pass-wrapper .eye-icon{
+.container .form .input-box .pass-wrapper .eye-icon {
 	position: absolute;
 	cursor: pointer;
 	right: 8%;
 }
 
-#show-pass{
+#show-pass {
 	display: none;
 }
 
-.container .form .pass-forget{
+.container .form .pass-forget {
     margin: 1rem 0;
 }
 
-.container .form .pass-forget a{
+.container .form .pass-forget a {
     font-size: 1rem;
     color: var(--black);
     cursor: pointer;    
 }
 
-.container .form .pass-forget a span{
+.container .form .pass-forget a span {
     text-decoration: underline;
 }
 
@@ -127,7 +127,7 @@ body{
 	text-align: center;
 }
 
-.container .form .send-box .btn{
+.container .form .send-box .btn {
     margin-top: .5rem;
     padding: .6rem 2rem;
     font-size: 1.4rem;
@@ -144,42 +144,42 @@ body{
 }
 
 /* media queries */
-@media (max-width:991px){
-    html{
+@media (max-width:991px) {
+    html {
         font-size: 55%;
     }
 }
 
-@media (max-width:768px){
-    #menu-btn{
+@media (max-width:768px) {
+    #menu-btn {
         display: inline-block;
     }
 
-	.container{
+	.container {
 		margin-top: 22%;
         max-width: 50rem;
 	}
 
-	.container .form .input-box label{
+	.container .form .input-box label {
 		font-size: 1.4rem;
 	}
 
-	.container .form .input-box input{
+	.container .form .input-box input {
 		font-size: 1.4rem;
 	}
 
-	.container .form .input-box select{
+	.container .form .input-box select {
 		font-size: 1.4rem;
 		height: 5.5rem;
 	}
 
-    .container .form .pass-forget a{
+    .container .form .pass-forget a {
         font-size: 1.4rem;
     }
 }
 
-@media (max-width:450px){
-    html{
+@media (max-width:450px) {
+    html {
         font-size: 50%;
     }
 }

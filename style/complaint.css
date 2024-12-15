@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;600&display=swap');
 
-:root{
+:root {
     --orange: #fd7d14;
     --black: #131218;
     --box-shadow: 0 .5rem 1.5rem rgba(0,0,0,.1);
@@ -9,7 +9,7 @@
 	--white: #fff;
 }
 
-*{
+* {
 	font-family: 'Poppins', sans-serif;
     margin: 0;
     padding: 0;
@@ -20,18 +20,18 @@
 	transition: all .2s linear;
 }
 
-html{
+html {
     font-size: 62,5%;
     overflow-x: hidden;
     scroll-behavior: smooth;
     scroll-padding-top: 7rem;
 }
 
-body{
+body {
 	background: #f1f2f3;
 }
 
-.btn{
+.btn {
     margin-top: 1rem;
     display: inline-block;
     padding: .6rem 2rem;
@@ -48,7 +48,7 @@ body{
     color: var(--white);
 }
 
-.header{
+.header {
 	position: fixed;
     top: 0; left: 0; right: 0;
     z-index: 1000;
@@ -60,11 +60,11 @@ body{
     box-shadow: var(--box-shadow);
 }
 
-.header .logo{
+.header .logo {
 	padding-top: 1.5rem;
 }
 
-.container{
+.container {
 	position: relative;
 	margin: 8% auto 2%;
 	border-radius: .5rem;
@@ -74,32 +74,32 @@ body{
 	padding: 2rem;
 }
 
-.container h2{
+.container h2 {
 	padding-bottom: 1.2rem;
 	font-size: 2rem;
 	text-align: center;
 	border-bottom: var(--border);
 }
 
-.container .form{
+.container .form {
 	margin-top: 1.8rem;
 }
 
-.container .form .input-box{
+.container .form .input-box {
 	width: 100%;
 	margin-top: 1.3rem;
 }
 
-.container .form .input-box label{
+.container .form .input-box label {
 	color: var(--black);
 }
 
-.container .form .input-box #message{
+.container .form .input-box #message {
 	display: block;
     margin-bottom: 15px;
 }
 
-.container .form .input-box textarea{
+.container .form .input-box textarea {
     width: 100%;
     height: 16rem;
     border: var(--border);
@@ -107,11 +107,11 @@ body{
     padding: .5rem;
 }
 
-.container .form .input-box label b{
+.container .form .input-box label b {
 	color: var(--red);
 }
 
-.container .form .input-box select{
+.container .form .input-box select {
 	position: relative;
 	height: 3.2rem;
 	width: 100%;
@@ -123,7 +123,7 @@ body{
 	background: none;
 }
 
-#gender{
+#gender {
 	position: relative;
 	height: 50px;
 	font-size: 1rem;
@@ -134,7 +134,7 @@ body{
 	background: none;
 }
 
-.container .form .input-box input{
+.container .form .input-box input {
 	position: relative;
 	height: 50px;
 	width: 100%;
@@ -147,17 +147,17 @@ body{
     padding: 0 1rem;
 }
 
-p#required{
+p#required {
 	color: var(--red);
 	margin: 1rem 0;
 }
 
-.container .form .send-box{
+.container .form .send-box {
 	text-align: center;
 }
 
 /* complaint confirmation */
-.confirmation .overlay{
+.confirmation .overlay {
     position: fixed;
     top: 0px;
     left: 0px;
@@ -168,7 +168,7 @@ p#required{
     display: none;
 }
 
-.confirmation .content{
+.confirmation .content {
     position: absolute;
     top: 50%;
     left: 50%;
@@ -182,19 +182,19 @@ p#required{
     box-sizing: border-box;
 }
 
-.confirmation .content h2{
+.confirmation .content h2 {
     font-size: 2rem;
     color: var(--black);
 }
 
-.confirmation .content p{
+.confirmation .content p {
     font-size: 1.3rem;
     color: var(--black);
     line-height: 1.6;
     padding: .5rem 0;
 }
 
-.confirmation .content p span{
+.confirmation .content p span {
     font-weight: bold;
     text-decoration: underline;
 }
@@ -209,62 +209,62 @@ p#required{
 }
 
 /* media queries */
-@media (max-width:991px){
-    html{
+@media (max-width:991px) {
+    html {
         font-size: 55%;
     }
 }
 
-@media (max-width:768px){
-	.container{
+@media (max-width:768px) {
+	.container {
 		margin: 22% auto 6%;
 	}
 
-	.container .form .input-box label{
+	.container .form .input-box label {
 		font-size: 1.4rem;
 	}
 
-	.container .form .input-box input{
+	.container .form .input-box input {
 		font-size: 1.4rem;
 	}
 
-	.container .form .input-box select{
+	.container .form .input-box select {
 		font-size: 1.4rem;
 		height: 5.5rem;
 	}
 
-	#gender-label{
+	#gender-label {
 		font-size: 1.4rem;
 	}
 
-	#gender{
+	#gender {
 		font-size: 1.4rem;
 		height: 5.5rem;
 	}
 	
-	p#required{
+	p#required {
 		font-size: 1.4rem;
 	}
 
-    .container .form .input-box textarea{
+    .container .form .input-box textarea {
         font-size: 1.4rem;
     }
 
-    .confirmation{
+    .confirmation {
         width: 95%;
     }
 
-    .confirmation h2{
+    .confirmation h2 {
         font-size: 2.2rem;
     }
     
-    .confirmation p{
+    .confirmation p {
         font-size: 1.6rem;
     }
 }
 
-@media (max-width:450px){
-    html{
+@media (max-width:450px) {
+    html {
         font-size: 50%;
     }
 }

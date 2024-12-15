@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;600&display=swap');
 
-:root{
+:root {
     --orange: #fd7d14;
     --black: #131218;
     --box-shadow: 0 .5rem 1.5rem rgba(0,0,0,.1);
@@ -9,7 +9,7 @@
 	--white: #fff;
 }
 
-*{
+* {
 	font-family: 'Poppins', sans-serif;
     margin: 0;
     padding: 0;
@@ -20,18 +20,18 @@
 	transition: all .2s linear;
 }
 
-html{
+html {
     font-size: 62,5%;
     overflow-x: hidden;
     scroll-behavior: smooth;
     scroll-padding-top: 7rem;
 }
 
-body{
+body {
 	background: #f1f2f3;
 }
 
-.header{
+.header {
 	position: fixed;
     top: 0; left: 0; right: 0;
     z-index: 1000;
@@ -43,11 +43,11 @@ body{
     box-shadow: var(--box-shadow);
 }
 
-.header .logo{
+.header .logo {
 	padding-top: 1.5rem;
 }
 
-.container{
+.container {
 	position: relative;
 	margin: 8% auto 2%;
 	border-radius: .5rem;
@@ -57,33 +57,33 @@ body{
 	padding: 2rem;
 }
 
-.container h2{
+.container h2 {
 	padding-bottom: 1.2rem;
 	font-size: 2rem;
 	text-align: center;
 	border-bottom: var(--border);
 }
 
-.container .form{
+.container .form {
 	margin-top: 1.8rem;
 }
 
-.container .form .input-box{
+.container .form .input-box {
 	width: 100%;
 	margin-top: 1.3rem;
 }
 
-.container .form .input-box label{
+.container .form .input-box label {
 	color: var(--black);
 }
 
-.container .form .input-box label b{
+.container .form .input-box label b {
 	color: var(--red);
 	text-decoration: underline;
 	
 }
 
-.container .form .input-box select{
+.container .form .input-box select {
 	position: relative;
 	height: 3.2rem;
 	/* width: 100%; */
@@ -95,7 +95,7 @@ body{
 	background: none;
 }
 
-p#required{
+p#required {
 	color: var(--red);
 	margin: 1rem 0;
 }
@@ -104,7 +104,7 @@ p#required{
 	text-align: center;
 }
 
-.container .form .send-box .btn{
+.container .form .send-box .btn {
     margin-top: .5rem;
     padding: .6rem 2rem;
     font-size: 1.4rem;
