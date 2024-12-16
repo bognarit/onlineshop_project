@@ -392,6 +392,22 @@ section {
     margin-bottom: 1%;
 }
 
+.products .group {
+    width: 35rem;
+    height: 3.2rem;
+    background: var(--white);
+    border-radius: .5rem;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: var(--box-shadow);
+    margin: auto;
+    margin-bottom: 1.5%;
+    font-size: 1.2rem;
+    padding-left: 1.3rem;
+}
+
 .products .search-form input {
     height: 100%;
     width: 100%;

@@ -5,7 +5,8 @@
         "category": "Gemüse",
         "price": 0.79,
         "quantity": "Stk", 
-        "image": "./img/food/food 01.jpg"
+        "image": "./img/food/food 01.jpg",
+        "group": "Food"
     },
     {
         "id": 2,
@@ -13,7 +14,8 @@
         "category": "Obst",
         "price": 2.79,
         "quantity": "Kg", 
-        "image": "./img/food/food 02.jpg"
+        "image": "./img/food/food 02.jpg",
+        "group": "Food"
     },
     {
         "id": 3,
@@ -21,7 +23,8 @@
         "category": "Obst",
         "price": 2.49,
         "quantity": "Kg",
-        "image": "./img/food/food 03.jpg"
+        "image": "./img/food/food 03.jpg",
+        "group": "Food"
     },
     {
         "id": 4,
@@ -29,7 +32,8 @@
         "category": "Gemüse",
         "price": 0.99,
         "quantity": "Kg",
-        "image": "./img/food/food 04.jpg"
+        "image": "./img/food/food 04.jpg",
+        "group": "Food"
     },
     {
         "id": 5,
@@ -37,7 +41,8 @@
         "category": "Obst",
         "price": 1.49,
         "quantity": "Kg",
-        "image": "./img/food/food 05.jpg"
+        "image": "./img/food/food 05.jpg",
+        "group": "Food"
     },
     {
         "id": 6,
@@ -45,7 +50,8 @@
         "category": "Gemüse",
         "price": 1.09,
         "quantity": "Kg",
-        "image": "./img/food/food 06.jpg"
+        "image": "./img/food/food 06.jpg",
+        "group": "Food"
     },
     {
         "id": 7,
@@ -53,7 +59,8 @@
         "category": "Milchprodukte",
         "price": 1.29,
         "quantity": "Stk",
-        "image": "./img/food/food 07.jpg"
+        "image": "./img/food/food 07.jpg",
+        "group": "Food"
     },
     {
         "id": 8,
@@ -61,7 +68,8 @@
         "category": "Milchprodukte",
         "price": 1.99,
         "quantity": "Stk",
-        "image": "./img/food/food 08.jpg"
+        "image": "./img/food/food 08.jpg",
+        "group": "Food"
     },
     {
         "id": 9,
@@ -69,7 +77,8 @@
         "category": "Milchprodukte",
         "price": 0.89,
         "quantity": "Stk",
-        "image": "./img/food/food 09.jpg"
+        "image": "./img/food/food 09.jpg",
+        "group": "Food"
     },
     {
         "id": 10,
@@ -77,7 +86,8 @@
         "category": "Milchprodukte",
         "price": 1.59,
         "quantity": "Stk",
-        "image": "./img/food/food 10.jpg"
+        "image": "./img/food/food 10.jpg",
+        "group": "Food"
     },
     {
         "id": 11,
@@ -85,7 +95,8 @@
         "category": "Getränke",
         "price": 0.75,
         "quantity": "Stk",
-        "image": "./img/food/food 11.jpg"
+        "image": "./img/food/food 11.jpg",
+        "group": "Food"
     },
     {
         "id": 12,
@@ -93,7 +104,8 @@
         "category": "Getränke",
         "price": 17.79,
         "quantity": "Stk",
-        "image": "./img/food/food 12.jpg"
+        "image": "./img/food/food 12.jpg",
+        "group": "Food"
     },
     {
         "id": 13,
@@ -101,7 +113,8 @@
         "category": "Getränke",
         "price": 1.49,
         "quantity": "Stk",
-        "image": "./img/food/food 13.jpg"
+        "image": "./img/food/food 13.jpg",
+        "group": "Food"
     },
     {
         "id": 14,
@@ -109,7 +122,8 @@
         "category": "Süßigkeiten",
         "price": 1.39,
         "quantity": "Stk",
-        "image": "./img/food/food 14.jpg"
+        "image": "./img/food/food 14.jpg",
+        "group": "Food"
     },
     {
         "id": 15,
@@ -117,7 +131,8 @@
         "category": "Süßigkeiten",
         "price": 0.95,
         "quantity": "Stk",
-        "image": "./img/food/food 15.jpg"
+        "image": "./img/food/food 15.jpg",
+        "group": "Food"
     },
     {
         "id": 16,
@@ -125,7 +140,8 @@
         "category": "Fleischprodukte",
         "price": 7.99,
         "quantity": "Kg",
-        "image": "./img/food/food 16.jpg"
+        "image": "./img/food/food 16.jpg",
+        "group": "Food"
     },
     {
         "id": 17,
@@ -133,7 +149,8 @@
         "category": "Fleischprodukte",
         "price": 5.99,
         "quantity": "Kg",
-        "image": "./img/food/food 17.jpg"
+        "image": "./img/food/food 17.jpg",
+        "group": "Food"
     },
     {
         "id": 18,
@@ -141,7 +158,8 @@
         "category": "Möbel",
         "price": 16.90,
         "quantity": "Stk",
-        "image": "./img/non-food/non-food 01.jpg"
+        "image": "./img/non-food/non-food 01.jpg",
+        "group": "Non-Food"
     },
     {
         "id": 19,
@@ -149,7 +167,8 @@
         "category": "Möbel",
         "price": 129.49,
         "quantity": "Stk",
-        "image": "./img/non-food/non-food 02.jpg"
+        "image": "./img/non-food/non-food 02.jpg",
+        "group": "Non-Food"
     },
     {
         "id": 20,
@@ -157,7 +176,8 @@
         "category": "Möbel",
         "price": 229.99,
         "quantity": "Stk",
-        "image": "./img/non-food/non-food 03.jpg"
+        "image": "./img/non-food/non-food 03.jpg",
+        "group": "Non-Food"
     },
     {
         "id": 21,
@@ -165,7 +185,8 @@
         "category": "Elektronische Geräte",
         "price": 19.99,
         "quantity": "Stk",
-        "image": "./img/non-food/non-food 04.jpg"
+        "image": "./img/non-food/non-food 04.jpg",
+        "group": "Non-Food"
     },
     {
         "id": 22,
@@ -173,7 +194,8 @@
         "category": "Elektronische Geräte",
         "price": 49.99,
         "quantity": "Stk",
-        "image": "./img/non-food/non-food 05.jpg"
+        "image": "./img/non-food/non-food 05.jpg",
+        "group": "Non-Food"
     },
     {
         "id": 23,
@@ -181,7 +203,8 @@
         "category": "Elektronische Geräte",
         "price": 59.99,
         "quantity": "Stk",
-        "image": "./img/non-food/non-food 06.jpg"
+        "image": "./img/non-food/non-food 06.jpg",
+        "group": "Non-Food"
     },
     {
         "id": 24,
@@ -189,7 +212,8 @@
         "category": "Elektronische Geräte",
         "price": 27.99,
         "quantity": "Stk",
-        "image": "./img/non-food/non-food 07.jpg"
+        "image": "./img/non-food/non-food 07.jpg",
+        "group": "Non-Food"
     },
     {
         "id": 25,
@@ -197,7 +221,8 @@
         "category": "Uhren",
         "price": 24.99,
         "quantity": "Stk",
-        "image": "./img/non-food/non-food 08.jpg"
+        "image": "./img/non-food/non-food 08.jpg",
+        "group": "Non-Food"
     },
     {
         "id": 26,
@@ -205,7 +230,8 @@
         "category": "Uhren",
         "price": 49.99,
         "quantity": "Stk",
-        "image": "./img/non-food/non-food 09.jpg"
+        "image": "./img/non-food/non-food 09.jpg",
+        "group": "Non-Food"
     },
     {
         "id": 27,
@@ -213,7 +239,8 @@
         "category": "Haushalt",
         "price": 2.25,
         "quantity": "Stk",
-        "image": "./img/non-food/non-food 10.jpg"
+        "image": "./img/non-food/non-food 10.jpg",
+        "group": "Non-Food"
     },
     {
         "id": 28,
@@ -221,7 +248,8 @@
         "category": "Haushalt",
         "price": 0.99,
         "quantity": "Stk",
-        "image": "./img/non-food/non-food 11.jpg"
+        "image": "./img/non-food/non-food 11.jpg",
+        "group": "Non-Food"
     },
     {
         "id": 29,
@@ -229,7 +257,8 @@
         "category": "Haushalt",
         "price": 14.99,
         "quantity": "Stk",
-        "image": "./img/non-food/non-food 12.jpg"
+        "image": "./img/non-food/non-food 12.jpg",
+        "group": "Non-Food"
     },
     {
         "id": 30,
@@ -237,6 +266,7 @@
         "category": "Drogerie",
         "price": 1.99,
         "quantity": "Stk",
-        "image": "./img/non-food/non-food 13.jpg"
+        "image": "./img/non-food/non-food 13.jpg",
+        "group": "Non-Food"
     }
 ]
